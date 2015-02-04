@@ -1702,7 +1702,7 @@ ul.social_icons li  a i{
 }
 
 .pricing-area ul {
-  background:#ffffff;
+  background:#f1f1f1;
   padding: 0;
   margin: 0;
 }
@@ -1715,7 +1715,7 @@ ul.social_icons li  a i{
 }
 
 .pricing-area ul li:nth-child(even){
-  background:#f1f1f1;
+  background:#ffffff;
 }
 
 .pricing-area .price-three img, 
