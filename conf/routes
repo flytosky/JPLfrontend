@@ -7,7 +7,8 @@
 # GET     /                           @controllers.Application.index
 
 # Climate Service
-POST	/climate/add/climateService				@controllers.ClimateServiceController.addClimateService
+GET		/climate/getAllClimateServices			@controllers.ClimateServiceController.getAllClimateServices
+POST	/climate/addClimateService				@controllers.ClimateServiceController.addClimateService
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

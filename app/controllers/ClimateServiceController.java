@@ -17,7 +17,7 @@ public class ClimateServiceController extends Controller {
 	final static Form<ClimateService> climateServiceForm = Form
 			.form(ClimateService.class);
  
-	public static Result addClimateService() {
+	public Result addClimateService() {
 		Form<ClimateService> cs = climateServiceForm.bindFromRequest();
 
 		ObjectNode jsonData = Json.newObject();
@@ -41,7 +41,10 @@ public class ClimateServiceController extends Controller {
 		}
 		return redirect("/climate/getAllClimateServices");
 	}
-
+	
+	public Result getAllClimateServices() {
+		return null;
+	}
 }
 
 
