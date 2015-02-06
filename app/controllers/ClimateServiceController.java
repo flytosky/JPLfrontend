@@ -50,7 +50,6 @@ public class ClimateServiceController extends Controller {
 	public Result getAllClimateServices(){
 		return null;
 	}
-
 }
 
 
