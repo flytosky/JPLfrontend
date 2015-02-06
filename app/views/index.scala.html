@@ -1,7 +1,864 @@
-@(message: String)
+@import helper._
+@main("index") {
 
-@main("Welcome to Play") {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>JPL Workflow Platform</title>
+	
+	<!-- core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="images/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+</head><!--/head-->
 
-    @play20.welcome(message, style = "Java")
+<body class="homepage">
+
+    <!-- <header id="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-xs-4">
+                        <div class="top-number"><p><i class="fa fa-phone-square"></i>  +0123 456 70 90</p></div>
+                    </div>
+                    <div class="col-sm-6 col-xs-8">
+                       <div class="social">
+                            <ul class="social-share">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                            </ul>
+                            <div class="search">
+                                <form role="form">
+                                    <input type="text" class="search-form" autocomplete="off" placeholder="Search">
+                                    <i class="fa fa-search"></i>
+                                </form>
+                           </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <nav class="navbar navbar-inverse" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img src="images/logo.png" height="60px" width="300px" alt="logo"></a>
+                </div>
+				
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Web Services <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="services.html">All Services</a></li>
+                                <li><a href="add-web.html">Add A Service</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account Management <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="updateUser.html">Update User Details</a></li>
+                                <li><a href="deleteUser.html">Delete User</a></li>
+                                <li><a href="accountSummary.html">Account Summary</a></li>
+                                <li><a href="serviceLog.html">All service Log</a></li>
+                                <li><a href="searchServiceLog.html">Search Service Log</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="about-us.html">About Us</a></li> 
+                        <li><a href="contact-us.html">Contact</a></li>
+                        <li><a href="log-in.html">Log In</a></li>
+                    </ul>
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+		
+    </header><!--/header-->
+
+    <section id="main-slider" class="no-margin">
+        <div class="carousel slide">
+            <ol class="carousel-indicators">
+                <li data-target="#main-slider" data-slide-to="0" class="active"></li>
+                <li data-target="#main-slider" data-slide-to="1"></li>
+            </ol>
+            <div class="carousel-inner">
+
+                <div class="item active" style="background-image: url(images/slider/front1.jpg)">
+                    <div class="container">
+                        <div class="row slide-margin">
+                            <div class="col-sm-6">
+                                <div class="carousel-content">
+                                    <h1 class="animation animated-item-1" style="color: #ffffff">Climate Model Analysis</h1>
+                                    <h2 class="animation animated-item-2" style="text-align: justify">JPL has provided a repository of web services for multi-aspect physics-based and pheno- menon-oriented climate model performance evaluation and diagnosis through the compre-hensive and synergistic use of multiple obser-vational data, reanalysis data, and model outputs.</h2>
+                                    <a class="btn-slide animation animated-item-3" href="#">Read More</a>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 hidden-xs animation animated-item-4">
+                                <div class="slider-img">
+                                    <img src="images/slider/img1.png" class="img-responsive">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div><!--/.item-->
+
+                <div class="item" style="background-image: url(images/slider/front2.jpg)">
+                    <div class="container">
+                        <div class="row slide-margin">
+                            <div class="col-sm-6">
+                                <div class="carousel-content">
+                                    <h1 class="animation animated-item-1" style="color: #ffffff">Climate Model Analysis</h1>
+                                    <h2 class="animation animated-item-2" style="text-align: justify">We will help you learn the available web services, how to use them, and help you to design your climate analytics workflows.</h2>
+                                    <a class="btn-slide animation animated-item-3" href="#">Read More</a>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 hidden-xs animation animated-item-4">
+                                <div class="slider-img">
+                                    <img src="images/slider/img3.png" class="img-responsive">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--/.item-->
+            </div><!--/.carousel-inner-->
+        </div><!--/.carousel-->
+        <a class="prev hidden-xs" href="#main-slider" data-slide="prev">
+            <i class="fa fa-chevron-left"></i>
+        </a>
+        <a class="next hidden-xs" href="#main-slider" data-slide="next">
+            <i class="fa fa-chevron-right"></i>
+        </a>
+    </section><!--/#main-slider-->
+
+    <section id="feature" >
+        <div class="container">
+           <div class="center wow fadeInDown">
+                <h2>Features</h2>
+            </div>
+
+            <div class="row">
+                <div class="features">
+                    <div class="col-md-6 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                        <div class="feature-wrap">
+                            <a href="http://sensorserviceplatform.github.io/Visualization/" target="_blank">
+                                <i class="fa fa-street-view"></i>
+                            </a>
+                            <h2>Visualization</h2>
+                            <h3>A visualization of the sensor network.</h3>
+                        </div>
+                    </div><!--/.col-md-4-->
+
+                    <div class="col-md-6 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                        <div class="feature-wrap">
+                            <a href="http://sensorserviceplatform.github.io/VirtualSensorEditor/" target="_blank">
+                                <i class="fa fa-connectdevelop"></i>
+                            </a>
+                            <h2>Virtual Sensor</h2>
+                            <h3>A virtual sensor tour.</h3>
+                        </div>
+                    </div><!--/.col-md-4-->
+
+                    <div class="col-md-6 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                        <div class="feature-wrap">
+                            <a href="https://github.com/flytosky/JPLfrontend" target="_blank">
+                                <i class="fa fa-github"></i>
+                            </a>
+                            <h2>Open Source</h2>
+                            <h3>All the code is currently hosted on Github. Feel free to contribute to this community.</h3>
+                        </div>
+                    </div><!--/.col-md-4-->
+
+                    <div class="col-md-6 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                        <div class="feature-wrap">
+                            <a href="https://github.com/flytosky/JPLfrontend/blob/master/LICENSE" target="_blank">
+                                <i class="fa fa-share-square-o"></i>
+                            </a>
+                            <h2>To Dos</h2>
+                            <h3>Check the open issues on Github.</h3>
+                        </div>
+                    </div><!--/.col-md-4-->
+                </div><!--/.services-->
+            </div><!--/.row-->    
+        </div><!--/.container-->
+    </section><!--/#feature-->
+
+    <section id="recent-works">
+        <div class="container">
+            <div class="center wow fadeInDown">
+                <h2>Recent Works</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="recent-work-wrap">
+                        <img class="img-responsive" src="images/portfolio/recent/item1.jpg" alt="">
+                        <div class="overlay">
+                            <div class="recent-work-inner">
+                                <h3><a>22nd IEEE International Conference on Web Services (ICWS)</a></h3>
+                                <p>In 2015, we will celebrate our 22nd version of gathering, to strive to advance the largest international professional forum on Web-based services.</p>
+                            </div> 
+                        </div>
+                    </div>
+                </div>   
+
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="recent-work-wrap">
+                        <img class="img-responsive" src="images/portfolio/recent/item2.jpg" alt="">
+                        <div class="overlay">
+                            <div class="recent-work-inner">
+                                <h3><a>8th IEEE International Conference on Cloud Computing (CLOUD)</a></h3>
+                                <p>In 2015, we will celebrate our 8th version of gathering, to strive to advance the largest international professional forum on cloud computing.</p>
+                            </div> 
+                        </div>
+                    </div>
+                </div> 
+
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="recent-work-wrap">
+                        <img class="img-responsive" src="images/portfolio/recent/item3.jpg" alt="">
+                        <div class="overlay">
+                            <div class="recent-work-inner">
+                                <h3><a>3rd IEEE International Conference on Mobile Services (MS)</a></h3>
+                                <p>The 2015 IEEE International Conference on Mobile Services (MS) aims at providing an international forum that is dedicated to exploring different aspects of mobile services.</p>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </section><!--/#recent-works-->
+
+    <!-- <section id="services" class="service-item">
+	   <div class="container">
+            <div class="center wow fadeInDown">
+                <h2>Our Service</h2>
+            </div>
+
+            <div class="row">
+
+                <div class="col-sm-6 col-md-4">
+                    <div class="media services-wrap wow fadeInDown">
+                        <div class="pull-left">
+                            <img class="img-responsive" src="images/services/services1.png">
+                        </div>
+                        <div class="media-body">
+                            <h3 class="media-heading">SEO Marketing</h3>
+                            <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4">
+                    <div class="media services-wrap wow fadeInDown">
+                        <div class="pull-left">
+                            <img class="img-responsive" src="images/services/services2.png">
+                        </div>
+                        <div class="media-body">
+                            <h3 class="media-heading">SEO Marketing</h3>
+                            <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4">
+                    <div class="media services-wrap wow fadeInDown">
+                        <div class="pull-left">
+                            <img class="img-responsive" src="images/services/services3.png">
+                        </div>
+                        <div class="media-body">
+                            <h3 class="media-heading">SEO Marketing</h3>
+                            <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
+                        </div>
+                    </div>
+                </div>  
+
+                <div class="col-sm-6 col-md-4">
+                    <div class="media services-wrap wow fadeInDown">
+                        <div class="pull-left">
+                            <img class="img-responsive" src="images/services/services4.png">
+                        </div>
+                        <div class="media-body">
+                            <h3 class="media-heading">SEO Marketing</h3>
+                            <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4">
+                    <div class="media services-wrap wow fadeInDown">
+                        <div class="pull-left">
+                            <img class="img-responsive" src="images/services/services5.png">
+                        </div>
+                        <div class="media-body">
+                            <h3 class="media-heading">SEO Marketing</h3>
+                            <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4">
+                    <div class="media services-wrap wow fadeInDown">
+                        <div class="pull-left">
+                            <img class="img-responsive" src="images/services/services6.png">
+                        </div>
+                        <div class="media-body">
+                            <h3 class="media-heading">SEO Marketing</h3>
+                            <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
+                        </div>
+                    </div>
+                </div>                                                
+            </div>
+        </div>
+    </section>-->
+
+    <!-- <section id="middle">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 wow fadeInDown">
+                    <div class="skill">
+                        <h2>Our Skills</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                        <div class="progress-wrap">
+                            <h3>Graphic Design</h3>
+                            <div class="progress">
+                              <div class="progress-bar  color1" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 85%">
+                                <span class="bar-width">85%</span>
+                              </div>
+
+                            </div>
+                        </div>
+
+                        <div class="progress-wrap">
+                            <h3>HTML</h3>
+                            <div class="progress">
+                              <div class="progress-bar color2" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 95%">
+                               <span class="bar-width">95%</span>
+                              </div>
+                            </div>
+                        </div>
+
+                        <div class="progress-wrap">
+                            <h3>CSS</h3>
+                            <div class="progress">
+                              <div class="progress-bar color3" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                <span class="bar-width">80%</span>
+                              </div>
+                            </div>
+                        </div>
+
+                        <div class="progress-wrap">
+                            <h3>Wordpress</h3>
+                            <div class="progress">
+                              <div class="progress-bar color4" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+                                <span class="bar-width">90%</span>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-sm-6 wow fadeInDown">
+                    <div class="accordion">
+                        <h2>Why People like us?</h2>
+                        <div class="panel-group" id="accordion1">
+                          <div class="panel panel-default">
+                            <div class="panel-heading active">
+                              <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne1">
+                                  Lorem ipsum dolor sit amet
+                                  <i class="fa fa-angle-right pull-right"></i>
+                                </a>
+                              </h3>
+                            </div>
+
+                            <div id="collapseOne1" class="panel-collapse collapse in">
+                              <div class="panel-body">
+                                  <div class="media accordion-inner">
+                                        <div class="pull-left">
+                                            <img class="img-responsive" src="images/accordion1.png">
+                                        </div>
+                                        <div class="media-body">
+                                             <h4>Adipisicing elit</h4>
+                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
+                                        </div>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo1">
+                                  Lorem ipsum dolor sit amet
+                                  <i class="fa fa-angle-right pull-right"></i>
+                                </a>
+                              </h3>
+                            </div>
+                            <div id="collapseTwo1" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseThree1">
+                                  Lorem ipsum dolor sit amet
+                                  <i class="fa fa-angle-right pull-right"></i>
+                                </a>
+                              </h3>
+                            </div>
+                            <div id="collapseThree1" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseFour1">
+                                  Lorem ipsum dolor sit amet
+                                  <i class="fa fa-angle-right pull-right"></i>
+                                </a>
+                              </h3>
+                            </div>
+                            <div id="collapseFour1" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section> -->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 wow fadeInDown">
+                   <div class="tab-wrap"> 
+                        <div class="media">
+                            <div class="parrent pull-left">
+                                <ul class="nav nav-tabs nav-stacked">
+                                    <li class=""><a href="#tab1" data-toggle="tab" class="analistic-01">ICWS 2015</a></li>
+                                    <li class="active"><a href="#tab2" data-toggle="tab" class="analistic-02">CLOUD 2015</a></li>
+                                    <li class=""><a href="#tab3" data-toggle="tab" class="tehnical">MS 2015</a></li>
+                                    <li class=""><a href="#tab4" data-toggle="tab" class="tehnical">Past Works1</a></li>
+                                    <li class=""><a href="#tab5" data-toggle="tab" class="tehnical">Past Works2</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="parrent media-body">
+                                <div class="tab-content">
+                                    <div class="tab-pane fade" id="tab1">
+                                        <div class="media">
+                                            <div class="media-body">
+                                                 <h2>22nd IEEE International Conference on Web Services (ICWS)</h2>
+                                                 <p>IEEE International Conference on Web Services (ICWS) has been a prime international forum for both researchers and industry practitioners to exchange the latest fundamental advances in the state of the art and practice of Web-based services, identify emerging research topics, and define the future of Web-based services. All topics regarding Web-based services lifecycle study and management align with the theme of ICWS. In 2015, we will celebrate our 22nd version of gathering, to strive to advance the largest international professional forum on Web-based services.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                     <div class="tab-pane fade active in" id="tab2">
+                                        <div class="media">
+                                            <div class="media-body">
+                                                 <h2>8th IEEE International Conference on Cloud Computing (CLOUD)</h2>
+                                                 <p>Being the first IEEE conference dedicated on cloud computing, IEEE International Conference on Cloud Computing (CLOUD) has been a prime international forum for both researchers and industry practitioners to exchange the latest fundamental advances in the state of the art and practice of cloud computing, identify emerging research topics, and define the future of cloud computing. All topics regarding cloud computing align with the theme of CLOUD. In 2015, we will celebrate our 8th version of gathering, to strive to advance the largest international professional forum on cloud computing.
+                                                 </p>
+                                            </div>
+                                        </div>
+                                     </div>
+
+                                     <div class="tab-pane fade" id="tab3">
+                                        <h2>3rd IEEE International Conference on Mobile Services (MS)</h2>
+                                        <p>Wireless and ubiquitous connectivity have enabled mobile computing and Internet access on the go as a life-enhancing and indispensable experience of modern life. More than 50 billion devices, in more than 200 device types, will likely be connected to the Internet by 2020 as integral components of a new generation of high-value application services for consumers and enterprises. API-defined mobile services have become essential ubiquitous services consumption and delivery enablers for many industries and government organizations worldwide. The 2015 IEEE International Conference on Mobile Services (MS) aims at providing an international forum that is dedicated to exploring different aspects of mobile services and to promoting technological innovations in research and development of mobile services.</p>
+                                     </div>
+                                     
+                                     <div class="tab-pane fade" id="tab4">
+                                        <p>past work put here.</p>
+                                     </div>
+
+                                     <div class="tab-pane fade" id="tab5">
+                                        <p>past work put here.</p>
+                                     </div>
+                                </div> <!--/.tab-content-->  
+                            </div> <!--/.media-body--> 
+                        </div> <!--/.media-->     
+                    </div><!--/.tab-wrap-->               
+                </div><!--/.col-sm-6-->
+            </div><!--/.row-->
+        </div><!--/.container-->
+
+    <section id="partner">
+        <div class="container">
+            <div class="center wow fadeInDown">
+                <h2>Our Partners</h2>
+            </div>    
+
+            <div class="partner row col-sm-12">
+                <div class="center col-sm-4 col-sm-offset-5"><a class="center" href="http://www.nasa.gov/" target="_blank"><img class="img-responsive wow fadeInDown center" data-wow-duration="1000ms" data-wow-delay="300ms" width="220px" height="180px" src="images/partners/partner1.png"></a></div>
+            </div>        
+        </div><!--/.container-->
+    </section><!--/#partner-->
+
+    <!-- <section id="conatcat-info">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="media contact-info wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                        <div class="pull-left">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <div class="media-body">
+                            <h2>Have a question or need a custom quote?</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation +0123 456 70 80</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </section> -->
+
+    <!-- <section id="bottom">
+        <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">We are hiring</a></li>
+                            <li><a href="#">Meet the team</a></li>
+                            <li><a href="#">Copyright</a></li>
+                            <li><a href="#">Terms of use</a></li>
+                            <li><a href="#">Privacy policy</a></li>
+                            <li><a href="#">Contact us</a></li>
+                        </ul>
+                    </div>    
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="#">Faq</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Forum</a></li>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">Refund policy</a></li>
+                            <li><a href="#">Ticket system</a></li>
+                            <li><a href="#">Billing system</a></li>
+                        </ul>
+                    </div>    
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Developers</h3>
+                        <ul>
+                            <li><a href="#">Web Development</a></li>
+                            <li><a href="#">SEO Marketing</a></li>
+                            <li><a href="#">Theme</a></li>
+                            <li><a href="#">Development</a></li>
+                            <li><a href="#">Email Marketing</a></li>
+                            <li><a href="#">Plugin Development</a></li>
+                            <li><a href="#">Article Writing</a></li>
+                        </ul>
+                    </div>    
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Our Partners</h3>
+                        <ul>
+                            <li><a href="#">Adipisicing Elit</a></li>
+                            <li><a href="#">Eiusmod</a></li>
+                            <li><a href="#">Tempor</a></li>
+                            <li><a href="#">Veniam</a></li>
+                            <li><a href="#">Exercitation</a></li>
+                            <li><a href="#">Ullamco</a></li>
+                            <li><a href="#">Laboris</a></li>
+                        </ul>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <footer id="footer" class="midnight-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    &copy; 2015 <a target="_blank" href="http://www.cmu.edu/index.shtml" title="Free Twitter Bootstrap WordPress Themes and HTML templates">Carnegie Mellon University</a>. All Rights Reserved.
+                </div>
+                <div class="col-sm-6">
+                    <ul class="pull-right">
+                        <li><a href="#">Top</a></li>
+                        <li><a href="#privacy" class="portfolio-link" data-toggle="modal">Privacy Policy</a></li>
+                        <li><a href="#terms" class="portfolio-link" data-toggle="modal">Terms</a></li>
+                        <li><a href="#contact" class="portfolio-link" data-toggle="modal">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer><!--/#footer-->
+    
+    <div class="portfolio-modal modal fade" id="privacy" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+
+                            <h2>
+                                Privacy Policy
+                            </h2>
+
+                            <p>
+                                Your privacy is very important to us. Accordingly, we have developed this Policy in order for you to understand how we collect, use, communicate and disclose and make use of personal information. The following outlines our privacy policy.
+                            </p>
+
+                            <ul>
+                                <li>
+                                    Before or at the time of collecting personal information, we will identify the purposes for which information is being collected.
+                                </li>
+                                <li>
+                                    We will collect and use of personal information solely with the objective of fulfilling those purposes specified by us and for other compatible purposes, unless we obtain the consent of the individual concerned or as required by law.
+                                </li>
+                                <li>
+                                    We will only retain personal information as long as necessary for the fulfillment of those purposes.
+                                </li>
+                                <li>
+                                    We will collect personal information by lawful and fair means and, where appropriate, with the knowledge or consent of the individual concerned.
+                                </li>
+                                <li>
+                                    Personal data should be relevant to the purposes for which it is to be used, and, to the extent necessary for those purposes, should be accurate, complete, and up-to-date.
+                                </li>
+                                <li>
+                                    We will protect personal information by reasonable security safeguards against loss or theft, as well as unauthorized access, disclosure, copying, use or modification.
+                                </li>
+                                <li>
+                                    We will make readily available to customers information about our policies and practices relating to the management of personal information.
+                                </li>
+                            </ul>
+
+                            <p>
+                                We are committed to conducting our business in accordance with these principles in order to ensure that the confidentiality of personal information is protected and maintained.
+                            </p>
+
+
+                            <div class="modal-head">
+                                <button type="button" class="btn btn-primary modal-head" data-dismiss="modal"><i class="fa fa-times"></i>Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="portfolio-modal modal fade" id="terms" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+
+                            <h2>
+                                Web Site Terms and Conditions of Use
+                            </h2>
+
+                            <h3>
+                                1. Terms
+                            </h3>
+
+                            <p>
+                                By accessing this web site, you are agreeing to be bound by these
+                                web site Terms and Conditions of Use, all applicable laws and regulations,
+                                and agree that you are responsible for compliance with any applicable local
+                                laws. If you do not agree with any of these terms, you are prohibited from
+                                using or accessing this site. The materials contained in this web site are
+                                protected by applicable copyright and trade mark law.
+                            </p>
+
+                            <h3>
+                                2. Use License
+                            </h3>
+
+                            <ol type="a">
+                                <li>
+                                    Permission is granted to temporarily download one copy of the materials
+                                    (information or software) on Carnegie Mellon University's web site for personal,
+                                    non-commercial transitory viewing only. This is the grant of a license,
+                                    not a transfer of title, and under this license you may not:
+
+                                    <ol type="i">
+                                        <li>modify or copy the materials;</li>
+                                        <li>use the materials for any commercial purpose, or for any public display (commercial or non-commercial);</li>
+                                        <li>attempt to decompile or reverse engineer any software contained on Carnegie Mellon University's web site;</li>
+                                        <li>remove any copyright or other proprietary notations from the materials; or</li>
+                                        <li>transfer the materials to another person or "mirror" the materials on any other server.</li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    This license shall automatically terminate if you violate any of these restrictions and may be terminated by Carnegie Mellon University at any time. Upon terminating your viewing of these materials or upon the termination of this license, you must destroy any downloaded materials in your possession whether in electronic or printed format.
+                                </li>
+                            </ol>
+
+                            <h3>
+                                3. Disclaimer
+                            </h3>
+
+                            <ol type="a">
+                                <li>
+                                    The materials on Carnegie Mellon University's web site are provided "as is". Carnegie Mellon University makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties, including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights. Further, Carnegie Mellon University does not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its Internet web site or otherwise relating to such materials or on any sites linked to this site.
+                                </li>
+                            </ol>
+
+                            <h3>
+                                4. Limitations
+                            </h3>
+
+                            <p>
+                                In no event shall Carnegie Mellon University or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption,) arising out of the use or inability to use the materials on Carnegie Mellon University's Internet site, even if Carnegie Mellon University or a Carnegie Mellon University authorized representative has been notified orally or in writing of the possibility of such damage. Because some jurisdictions do not allow limitations on implied warranties, or limitations of liability for consequential or incidental damages, these limitations may not apply to you.
+                            </p>
+
+                            <h3>
+                                5. Revisions and Errata
+                            </h3>
+
+                            <p>
+                                The materials appearing on Carnegie Mellon University's web site could include technical, typographical, or photographic errors. Carnegie Mellon University does not warrant that any of the materials on its web site are accurate, complete, or current. Carnegie Mellon University may make changes to the materials contained on its web site at any time without notice. Carnegie Mellon University does not, however, make any commitment to update the materials.
+                            </p>
+
+                            <h3>
+                                6. Links
+                            </h3>
+
+                            <p>
+                                Carnegie Mellon University has not reviewed all of the sites linked to its Internet web site and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by Carnegie Mellon University of the site. Use of any such linked web site is at the user's own risk.
+                            </p>
+
+                            <h3>
+                                7. Site Terms of Use Modifications
+                            </h3>
+
+                            <p>
+                                Carnegie Mellon University may revise these terms of use for its web site at any time without notice. By using this web site you are agreeing to be bound by the then current version of these Terms and Conditions of Use.
+                            </p>
+
+                            <h3>
+                                8. Governing Law
+                            </h3>
+
+                            <p>
+                                Any claim relating to Carnegie Mellon University's web site shall be governed by the laws of the State of CA without regard to its conflict of law provisions.
+                            </p>
+
+                            <p>
+                                General Terms and Conditions applicable to Use of a Web Site.
+                            </p>
+
+                           <div class="modal-head">
+                                <button type="button" class="btn btn-primary modal-head" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="portfolio-modal modal fade" id="contact" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+
+                            <h2>
+                                Contact Us
+                            </h2>
+                            <p>
+                                Carnegie Mellon University,<br>
+                                Silicon Valley <br>
+                                Moffett Field, CA 94035 <br>
+                                Building 23, #104 <br>
+                                Tel: 000-000-0000 <br>
+                            </p>
+                           <div class="modal-head">
+                                <button type="button" class="btn btn-primary modal-head" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/wow.min.js"></script>
+</body>
+</html>
 
 }

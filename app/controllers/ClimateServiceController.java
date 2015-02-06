@@ -10,14 +10,19 @@ import play.mvc.Result;
 import utils.Constants;
 import utils.RESTfulAPICalls;
 
+import javax.inject.Named;
+import javax.inject.Singleton;
+
 import models.ClimateService;
 
+@Named
+@Singleton
 public class ClimateServiceController extends Controller {
 	
 	final static Form<ClimateService> climateServiceForm = Form
 			.form(ClimateService.class);
  
-	public static Result addClimateService() {
+	public Result addClimateService() {
 		Form<ClimateService> cs = climateServiceForm.bindFromRequest();
 
 		ObjectNode jsonData = Json.newObject();
@@ -40,6 +45,10 @@ public class ClimateServiceController extends Controller {
 			e.printStackTrace();
 		}
 		return redirect("/climate/getAllClimateServices");
+	}
+	
+	public Result getAllClimateServices(){
+		return null;
 	}
 
 }
