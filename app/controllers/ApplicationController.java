@@ -24,4 +24,7 @@ public class ApplicationController extends Controller {
 	public Result index() {
 		return ok(index.render());
 	}
+	public Result services() {
+		return ok(services.render());
+	}
 }

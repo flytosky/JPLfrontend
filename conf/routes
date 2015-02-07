@@ -4,6 +4,16 @@
 
 # Home page - we use the @controllers syntax here so that the router knows we are referring to a class. In turn it
 # will call on the GlobalSettings.getController method to resolve the actual controller instance.
+# Application
+GET     /                           @controllers.ApplicationController.index
+GET     /services.html                           @controllers.ApplicationController.services
+GET     /                           @controllers.ApplicationController.index
+GET     /                           @controllers.ApplicationController.index
+GET     /                           @controllers.ApplicationController.index
+GET     /                           @controllers.ApplicationController.index
+GET     /                           @controllers.ApplicationController.index
+GET     /                           @controllers.ApplicationController.index
+GET     /                           @controllers.ApplicationController.index
 GET     /                           @controllers.ApplicationController.index
 
 # Climate Service
