@@ -5,56 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>About Us | Corlate</title>
-    
+    <title>JPL Workflow | Account Summary</title>
     <!-- core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/prettyPhoto.css" rel="stylesheet">
-    <link href="css/animate.min.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-    <link href="css/responsive.css" rel="stylesheet">
-    
+    <link href='@routes.Assets.at("stylesheets/bootstrap.min.css")' rel="stylesheet">
+    <link href='@routes.Assets.at("stylesheets/font-awesome.min.css")' rel="stylesheet">
+    <link href='@routes.Assets.at("stylesheets/animate.min.css")' rel="stylesheet">
+    <link href='@routes.Assets.at("stylesheets/prettyPhoto.css")' rel="stylesheet">
+    <link href='@routes.Assets.at("stylesheets/main.css")' rel="stylesheet">
+    <link href='@routes.Assets.at("stylesheets/responsive.css")' rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
-    <![endif]-->       
-    <link rel="shortcut icon" href="images/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+    <![endif]-->
+    <link rel="shortcut icon" href='@routes.Assets.at("images/ico/favicon.png")'>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href='@routes.Assets.at("images/ico/apple-touch-icon-144-precomposed.png")'>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href='@routes.Assets.at("images/ico/apple-touch-icon-114-precomposed.png")'>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href='@routes.Assets.at("images/ico/apple-touch-icon-72-precomposed.png")'>
+    <link rel="apple-touch-icon-precomposed" href='@routes.Assets.at("images/ico/apple-touch-icon-57-precomposed.png")'>
 </head><!--/head-->
-
 <body>
 
     <header id="header">
-        <!-- <div class="top-bar">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 col-xs-4">
-                        <div class="top-number"><p><i class="fa fa-phone-square"></i>  +0123 456 70 90</p></div>
-                    </div>
-                    <div class="col-sm-6 col-xs-8">
-                       <div class="social">
-                            <ul class="social-share">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                            </ul>
-                            <div class="search">
-                                <form role="form">
-                                    <input type="text" class="search-form" autocomplete="off" placeholder="Search">
-                                    <i class="fa fa-search"></i>
-                                </form>
-                           </div>
-                       </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
         <nav class="navbar navbar-inverse" role="banner">
             <div class="container">
                 <div class="navbar-header">
@@ -64,25 +35,33 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html"><img src="images/logo.png" height="60px" width="300px" alt="logo"></a>
+                    <a class="navbar-brand" href="/"><img src='@routes.Assets.at("images/logo.png")' height="60px" width="300px" alt="logo"></a>
                 </div>
                 
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
+                        <li class="active"><a href="/">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Web Services <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="services">All Services</a></li>
+                                <li><a href="servicesclass">All Services Classic</a></li>
+                                <li><a href="catalog">Services Catalog</a></li>
+                                <li><a href="addWeb">Add A Service</a></li>
+                                <li><a href="serviceLog">All service Log</a></li>
+                                <li><a href="searchServiceLog">Search Service Log</a></li>
+                            </ul>
+                        </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account Management <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="blog-item.html">Update User Details</a></li>
-                                <li><a href="pricing.html">Delete User</a></li>
-                                <li><a href="404.html">Account Summary</a></li>
-                                <li><a href="shortcodes.html">All service Log</a></li>
-                                <li><a href="portfolio.html">Search Service Log</a></li>
+                                <li><a href="updateUser">Update User Details</a></li>
+                                <li><a href="deleteUser">Delete User</a></li>
                             </ul>
                         </li>
-                        <li><a href="about-us.html">About Us</a></li> 
-                        <li><a href="contact-us.html">Contact</a></li>
+                        <li><a href="aboutUs">About Us</a></li> 
+                        <li><a href="contactUs">Contact</a></li>
+                        <li><a href="logIn">Log In</a></li>
                     </ul>
                 </div>
             </div><!--/.container-->
@@ -90,139 +69,74 @@
         
     </header><!--/header-->
 
-    <section class="pricing-page">
-        <div class="container">
-            <div class="center">  
-                <h2>Pricing Table</h2>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
-            </div>  
-            <div class="pricing-area text-center">
-                <div class="row">
-                    <div class="col-sm-4 plan price-one wow fadeInDown">
-                        <ul>
-                            <li class="heading-one">
-                                <h1>Start Up</h1>
-                                <span>$6/Month</span>
-                            </li>
-                            <li>5 Gb Disk Space</li>
-                            <li>1GB Dadicated Ram</li>
-                            <li>10 Addon Domain</li>
-                            <li>10 Email Account</li>
-                            <li>24/7 Support</li>
-                            <li class="plan-action">
-                                <a href="" class="btn btn-primary">Sign up</a>
-                            </li>
-                        </ul>
-                    </div>
+    <div class="container">
+        <br>
+        <br>
+        <div class="center">
+            <h2>Account Summary</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <h2>User: </h2>
+                <table class="table table-hover table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Start Date</th>
+                            <th>Start Time</th>
+                            <th>AMI Instance</th>
+                            <th>Duration</th>
+                            <th>Cost</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>04/08/2014</td>
+                            <td>9:34</td>
+                            <td>m3.large</td>
+                            <td>36 hours 5 minute</td>
+                            <td>$36</td>
+                        </tr>
+                        <tr>
+                            <td>04/12/2014</td>
+                            <td>16:26</td>
+                            <td>m3.medium</td>
+                            <td>24 hours 17 minute</td>
+                            <td>$24</td>
+                        </tr>
+                        <tr>
+                            <td>04/15/2014</td>
+                            <td>13:24</td>
+                            <td>m3.large</td>
+                            <td>10 hours 23 minute</td>
+                            <td>$11</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Total: $89</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Budget left: $111</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="center">
+                    <button class="btn btn-info">New Task</button>
+                </div> 
+            </div>
+            <div class="col-lg-6" style="padding-left:2cm">
+                <img src='@routes.Assets.at("images/NASA_logo.png")'>
+            </div>
+        </div>
 
-                    <div class="col-sm-4 plan price-two wow fadeInDown">
-                        <ul>
-                            <li class="heading-two">
-                                <h1>Standerd</h1>
-                                <span>$12/Month</span>
-                            </li>
-                            <li>10 Gb Disk Space</li>
-                            <li>2GB Dadicated Ram</li>
-                            <li>20 Addon Domain</li>
-                            <li>20 Email Account</li>
-                            <li>24/7 Support</li>
-                            <li class="plan-action">
-                                <a href="" class="btn btn-primary">Sign up</a>
-                            </li>
-                        </ul>
-                    </div>
+    </div>
 
-                    <div class="col-sm-4 plan price-three wow fadeInDown">
-                        <img src="images/ribon_one.png">
-                        <ul>
-                            <li class="heading-three">
-                                <h1>Premium</h1>
-                                <span>$24/Month</span>
-                            </li>
-                            <li>50 Gb Disk Space</li>
-                            <li>8GB Dadicated Ram</li>
-                            <li>Unlimited Addon Domain</li>
-                            <li>Unlimited Email Account</li>
-                            <li>24/7 Support</li>
-                            <li class="plan-action">
-                                <a href="" class="btn btn-primary">Sign up</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-sm-6 col-md-3 plan price-four wow fadeInDown">
-                        <ul>
-                            <li class="heading-four">
-                                <h1>Basic</h1>
-                                <span>$3/Month</span>
-                            </li>
-                            <li>5 Gb Disk Space</li>
-                            <li>1GB Dadicated Ram</li>
-                            <li>10 Addon Domain</li>
-                            <li>10 Email Account</li>
-                            <li>24/7 Support</li>
-                            <li class="plan-action">
-                                <a href="" class="btn btn-primary">Sign up</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-sm-6 col-md-3 plan price-five wow fadeInDown">
-                        <ul>
-                            <li class="heading-five">
-                                <h1>Standerd</h1>
-                                <span>$6/Month</span>
-                            </li>
-                            <li>5 Gb Disk Space</li>
-                            <li>1GB Dadicated Ram</li>
-                            <li>10 Addon Domain</li>
-                            <li>10 Email Account</li>
-                            <li>24/7 Support</li>
-                            <li class="plan-action">
-                                <a href="" class="btn btn-primary">Sign up</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-sm-6 col-md-3 plan price-six wow fadeInDown">
-                         <img src="images/ribon_two.png">
-                        <ul>
-                            <li class="heading-six">
-                                <h1>Premium</h1>
-                                <span>$12/Month</span>
-                            </li>
-                            <li>5 Gb Disk Space</li>
-                            <li>1GB Dadicated Ram</li>
-                            <li>10 Addon Domain</li>
-                            <li>10 Email Account</li>
-                            <li>24/7 Support</li>
-                            <li class="plan-action">
-                                <a href="" class="btn btn-primary">Sign up</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                     <div class="col-sm-6 col-md-3 plan price-seven wow fadeInDown">
-                        <ul>
-                            <li class="heading-seven">
-                                <h1>Developer</h1>
-                                <span>$19/Month</span>
-                            </li>
-                            <li>5 Gb Disk Space</li>
-                            <li>1GB Dadicated Ram</li>
-                            <li>10 Addon Domain</li>
-                            <li>10 Email Account</li>
-                            <li>24/7 Support</li>
-                            <li class="plan-action">
-                                <a href="" class="btn btn-primary">Sign up</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div><!--/pricing-area-->
-        </div><!--/container-->
-    </section><!--/pricing-page-->
-           
     <footer id="footer" class="midnight-blue">
         <div class="container">
             <div class="row">
@@ -231,7 +145,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ul class="pull-right">
-                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Top</a></li>
                         <li><a href="#privacy" class="portfolio-link" data-toggle="modal">Privacy Policy</a></li>
                         <li><a href="#terms" class="portfolio-link" data-toggle="modal">Terms</a></li>
                         <li><a href="#contact" class="portfolio-link" data-toggle="modal">Contact Us</a></li>
@@ -441,7 +355,6 @@
                                 Moffett Field, CA 94035 <br>
                                 Building 23, #104 <br>
                                 Tel: 000-000-0000 <br>
-                                Email:scgcmu@gmail.com
                             </p>
                            <div class="modal-head">
                                 <button type="button" class="btn btn-primary modal-head" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
@@ -453,14 +366,11 @@
         </div>
     </div>
 
-    <script src="js/jquery.js"></script>
-    <script type="text/javascript">
-        $('.carousel').carousel()
-    </script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/jquery.isotope.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/wow.min.js"></script>
+    <script src='@routes.Assets.at("javascripts/jquery.js")'></script>
+    <script src='@routes.Assets.at("javascripts/bootstrap.min.js")'></script>
+    <script src='@routes.Assets.at("javascripts/jquery.prettyPhoto.js")'></script>
+    <script src='@routes.Assets.at("javascripts/jquery.isotope.min.js")'></script>
+    <script src='@routes.Assets.at("javascripts/main.js")'></script>
+    <script src='@routes.Assets.at("javascripts/wow.min.js")'></script>
 </body>
 </html>

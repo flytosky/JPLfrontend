@@ -6,15 +6,18 @@
 # will call on the GlobalSettings.getController method to resolve the actual controller instance.
 # Application
 GET     /                           @controllers.ApplicationController.index
-GET     /services                           @controllers.ApplicationController.services
-GET     /                           @controllers.ApplicationController.index
-GET     /                           @controllers.ApplicationController.index
-GET     /                           @controllers.ApplicationController.index
-GET     /                           @controllers.ApplicationController.index
-GET     /                           @controllers.ApplicationController.index
-GET     /                           @controllers.ApplicationController.index
-GET     /                           @controllers.ApplicationController.index
-GET     /                           @controllers.ApplicationController.index
+GET     /services                   @controllers.ApplicationController.services
+GET     /servicesclass              @controllers.ApplicationController.servicesclass
+GET     /catalog                    @controllers.ApplicationController.catalog
+GET     /addWeb                     @controllers.ApplicationController.addWeb
+GET     /serviceLog                 @controllers.ApplicationController.serviceLog
+GET     /searchServiceLog           @controllers.ApplicationController.searchServiceLog
+GET     /updateUser                 @controllers.ApplicationController.updateUser
+GET     /deleteUser                 @controllers.ApplicationController.deleteUser
+GET     /aboutUs                    @controllers.ApplicationController.aboutUs
+GET     /contactUs                  @controllers.ApplicationController.contactUs
+GET     /logIn                      @controllers.ApplicationController.logIn
+GET     /signUp                     @controllers.ApplicationController.signUp
 
 # Climate Service
 POST	/climate/addClimateService				@controllers.ClimateServiceController.addClimateService

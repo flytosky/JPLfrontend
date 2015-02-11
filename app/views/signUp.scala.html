@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>JPL Workflow | Services</title>
+    <title>JPL Workflow | Sign Up</title>
     
     <!-- core CSS -->
     <link href='@routes.Assets.at("stylesheets/bootstrap.min.css")' rel="stylesheet">
@@ -53,7 +53,7 @@
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>-->
 
         <nav class="navbar navbar-inverse" role="banner">
             <div class="container">
@@ -70,7 +70,7 @@
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
                         <li><a href="/">Home</a></li>
-                        <li class="active" class="dropdown">
+                        <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Web Services <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
                                 <li><a href="services">All Services</a></li>
@@ -90,260 +90,192 @@
                         </li>
                         <li><a href="aboutUs">About Us</a></li> 
                         <li><a href="contactUs">Contact</a></li>
-                        <li><a href="logIn">Log In</a></li>
+                        <li class="active"><a href="logIn">Log In</a></li>
                     </ul>
                 </div>
             </div><!--/.container-->
         </nav><!--/nav-->
-        
     </header><!--/header-->
 
-    <section id="feature" class="transparent-bg wow fadeInDown" data-wow-duration="500ms" data-wow-delay="200ms">
+    <section id="about-us">
         <div class="container">
-            <div class="center wow fadeInDown">
-                <h2>Our Services</h2>
-                <p class="lead">Now we have up to 7 Climate Services.<br> All ready to use.</p>
-            </div>
-
-            <div class="pricing-area text-center">
-                <div class="row wow fadeInDown" data-wow-delay="300ms">
-                    <div class="col-sm-4 plan price-one wow fadeInDown">
-                        <ul>
-                            <li class="heading-one" data-toggle="collapse" data-target="#demo1">
-                                <span >Difference Plot of Two Time Averaged Variables</span>
-                            </li>
-                            <div id="demo1" class="collapse">
-                                <li   >This service calculates the differences between two specified variables and displays the lat-lon maps of the two variables and their differences.<br>
-                                    <br><br></li>
-                                <li>Scenario : 1</li>
-                                <li>Version : 2</li>
-                                <li>Root Service : 3</li>
-                            </div>
-                            <li class="plan-action">
-                                <a href="http://einstein.sv.cmu.edu:9003/cmac/web/diffPlot2Vars.html" class="btn btn-primary" target="_blank">LinkTo</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-sm-4 plan price-two wow fadeInDown" style="text-align: center">
-                        <ul>
-                            <li class="heading-two" data-toggle="collapse" data-target="#demo2">
-                                <span>2-D Variable Zonal Mean</span>
-                                <br>
-                                <br>
-                            </li>
-                            <div id="demo2" class="collapse">
-                                <li>This service generates a graph of a 2-dimensional variable's zonal mean with time averaing. Select a data source (model or observation), a variable name, and a time range below.<br></li>
-                                <li>Scenario : 1</li>
-                                <li>Version : 2</li>
-                                <li>Root Service : 3</li>
-                            </div>
-                            <li class="plan-action">
-                                <a href="http://einstein.sv.cmu.edu:9003/cmac/web/twoDimZonalMean.html" class="btn btn-primary" target="_blank">LinkTo</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-sm-4 plan price-three wow fadeInDown">
-                        <ul>
-                            <li class="heading-three" data-toggle="collapse" data-target="#demo3">
-                                <span>2-D Variable Map</span>
-                                <br>
-                                <br>
-                            </li>
-                            <div id="demo3" class="collapse">
-                            <li>This service generates a map of a 2-dimensional variable with time averaging and spatial subsetting. Select a data source (model or observation), a variable name, a time range, and a spatial range (lat-lon box) below.</li>
-                                <li>Scenario : 1</li>
-                                <li>Version : 2</li>
-                                <li>Root Service : 3</li>
-                            </div>
-                            <li class="plan-action">
-                                <a href="http://einstein.sv.cmu.edu:9003/cmac/web/twoDimMap.html" class="btn btn-primary" target="_blank">LinkTo</a>
-                            </li>
-                        </ul>
-                    </div>
+            <div class="team">
+                <div class="center wow fadeInDown">
+                    <h2>Chef Scientists</h2>
                 </div>
 
-                <div class="row wow fadeInDown" data-wow-delay="600ms">
-                    <div class="col-sm-4 plan price-four wow fadeInDown">
-                        <ul>
-                            <li class="heading-four" data-toggle="collapse" data-target="#demo4">
-                                <span>3-D Variable 2-D Slice</span>
-                                <br>
-                                <br>
-                            </li>
-                            <div id="demo4" class="collapse">
-                            <li>This service generates a slice map of a 3-dimensional variable at a selected pressure level. Select a data source, a variable name, a time range, a spatial range, and a pressure level below.</li>
-                            <li>Scenario : 1</li>
-                            <li>Version : 2</li>
-                            <li>Root Service : 3</li>
-                            </div>
-                            <li class="plan-action">
-                                <a href="http://einstein.sv.cmu.edu:9003/cmac/web/twoDimSlice3D.html" class="btn btn-primary" target="_blank">LinkTo</a>
-                            </li>
-                        </ul>
+                <div class="row clearfix">
+                    <div class="col-md-4 col-sm-6"> 
+                        <div class="single-profile-top wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+                            <div class="media">
+                                <div class="pull-left">
+                                    <a href="#"><img class="media-object" src='@routes.Assets.at("images/man1.jpg")' alt=""></a>
+                                </div>
+                                <div class="media-body">
+                                    <h4>Jhon Doe</h4>
+                                    <h5>Founder and CEO</h5>
+                                    <ul class="tag clearfix">
+                                        <li class="btn"><a href="#">Web</a></li>
+                                        <li class="btn"><a href="#">Ui</a></li>
+                                        <li class="btn"><a href="#">Ux</a></li>
+                                        <li class="btn"><a href="#">Photoshop</a></li>
+                                    </ul>
+                                    
+                                    <ul class="social_icons">
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li> 
+                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div><!--/.media -->
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                        </div>
+                    </div><!--/.col-lg-4 -->
+                    
+                    
+                    <div class="col-md-4 col-sm-6 col-md-offset-2"> 
+                        <div class="single-profile-top wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+                            <div class="media">
+                                <div class="pull-left">
+                                    <a href="#"><img class="media-object" src='@routes.Assets.at("images/man2.jpg")' alt=""></a>
+                                </div>
+                                <div class="media-body">
+                                    <h4>Jhon Doe</h4>
+                                    <h5>Founder and CEO</h5>
+                                    <ul class="tag clearfix">
+                                        <li class="btn"><a href="#">Web</a></li>
+                                        <li class="btn"><a href="#">Ui</a></li>
+                                        <li class="btn"><a href="#">Ux</a></li>
+                                        <li class="btn"><a href="#">Photoshop</a></li>
+                                    </ul>
+                                    <ul class="social_icons">
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li> 
+                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div><!--/.media -->
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                        </div>
+                    </div><!--/.col-lg-4 -->                    
+                </div> <!--/.row -->
+                <div class="row team-bar">
+                    <div class="first-one-arrow hidden-xs">
+                        <hr>
                     </div>
-
-                    <div class="col-sm-4 plan price-five wow fadeInDown">
-                        <ul>
-                            <li class="heading-five"  data-toggle="collapse" data-target="#demo5">
-                                <span>Scatter and Histogram Plot of Two Variables</span>
-
-                            </li>
-                            <div id="demo5" class="collapse">
-                            <li>This service generates a scatter plot between two specified variables and the histograms of the two variables, and calculates the correlation of the two variables.<br><br></li>
-                            <li>Scenario : 1</li>
-                            <li>Version : 2</li>
-                            <li>Root Service : 3</li>
-                            </div>
-                            <li class="plan-action">
-                                <a href="http://einstein.sv.cmu.edu:9003/cmac/web/scatterPlot2Vars.html" class="btn btn-primary" target="_blank">LinkTo</a>
-                            </li>
-                        </ul>
+                    <div class="first-arrow hidden-xs">
+                        <hr> <i class="fa fa-angle-up"></i>
                     </div>
-
-                    <div class="col-sm-4 plan price-six wow fadeInDown">
-                        <ul>
-                            <li class="heading-six" data-toggle="collapse" data-target="#demo6">
-                                <span>Conditional Sampling</span>
-                                <br>
-                                <br>
-                            </li>
-                            <div id="demo6" class="collapse">
-                            <li>This service sorts one variable by the values of another variable (environmental condition, e.g. SST) and displays the averaged value of the first variable as a function of the bin value of the second variable.</li>
-                            <li>Scenario : 1</li>
-                            <li>Version : 2</li>
-                            <li>Root Service : 3</li>
-                            </div>
-                            <li class="plan-action">
-                                <a href="http://www.cs.ucl.ac.uk/staff/w.langdon/bloat_csrp-97-29/node2.html" class="btn btn-primary" target="_blank">LinkTo</a>
-                            </li>
-                        </ul>
+                    <div class="second-arrow hidden-xs">
+                        <hr> <i class="fa fa-angle-down"></i>
                     </div>
-                </div>
-                <div class="row wow fadeInDown" data-wow-delay="900ms" >
-                    <div class="col-sm-4 col-sm-offset-4 plan price-seven wow fadeInDown">
-                        <ul>
-                            <li class="heading-seven" data-toggle="collapse" data-target="#demo7">
-                                <span>3-D Variable Average Vertical Profile</span>
-                            </li>
-                            <div id="demo7" class="collapse">
-                            <li>This service generates the average of a three-dimensional variable over a specified region and time and display the average as a function of pressure level as an X-Y plot.</li>
-                            <li>Scenario : 1</li>
-                            <li>Version : 2</li>
-                            <li>Root Service : 3</li>
-                            </div>
-                            <li class="plan-action">
-                                <a href="http://einstein.sv.cmu.edu:9003/cmac/web/threeDimVarVertical.html" class="btn btn-primary" target="_blank">LinkTo</a>
-                            </li>
-                        </ul>
+                    <div class="third-arrow hidden-xs">
+                        <hr> <i class="fa fa-angle-up"></i>
                     </div>
-                </div>
-            </div>
-        </div>
+                    <div class="fourth-arrow hidden-xs">
+                        <hr> <i class="fa fa-angle-down"></i>
+                    </div>
+                </div> <!--skill_border-->       
 
+                <div class="row clearfix">   
+                    <div class="col-md-4 col-sm-6 col-md-offset-2"> 
+                        <div class="single-profile-bottom wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
+                            <div class="media">
+                                <div class="pull-left">
+                                    <a href="#"><img class="media-object" src='@routes.Assets.at("images/man3.jpg")' alt=""></a>
+                                </div>
 
-
-
-
-
-
-
-            <!--<div class="row">-->
-                <!--<div class="features">-->
-                    <!--<div  style="text-align: center" class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">-->
-                        <!--<div class="feature-wrap " >-->
-                            <!--<i class="fa fa-bullhorn" style="text-align: center"></i>-->
-                        <!--</div>-->
-                        <!--<a href="http://einstein.sv.cmu.edu:9003/cmac/web/scatterPlot2Vars.html" class="btn btn-primary">LinkTo</a>-->
-                        <!--<h2>Scatter and Histogram Plot of Two Variables</h2>-->
-                        <!--<h3>This service generates a scatter plot between two specified variables and the histograms of the two variables, and calculates the correlation of the two variables.</h3>-->
-
-                    <!--</div>&lt;!&ndash;/.col-md-4&ndash;&gt;-->
-
-                    <!--<div class="col-md-6 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">-->
-                        <!--<div class="feature-wrap">-->
-                            <!--<i class="fa fa-comments"></i>-->
-                            <!--<h2>Difference Plot of Two Time Averaged Variables</h2>-->
-                            <!--<h3>This service calculates the differences between two specified variables and displays the lat-lon maps of the two variables and their differences.</h3>-->
-                        <!--</div>-->
-                    <!--</div>&lt;!&ndash;/.col-md-4&ndash;&gt;-->
-
-                    <!--<div class="col-md-6 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">-->
-                        <!--<div class="feature-wrap">-->
-                            <!--<i class="fa fa-cloud-download"></i>-->
-                            <!--<h2>Easy to customize</h2>-->
-                            <!--<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>-->
-                        <!--</div>-->
-                    <!--</div>&lt;!&ndash;/.col-md-4&ndash;&gt;-->
-                <!---->
-                    <!--<div class="col-md-6 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">-->
-                        <!--<div class="feature-wrap">-->
-                            <!--<i class="fa fa-leaf"></i>-->
-                            <!--<h2>Adipisicing elit</h2>-->
-                            <!--<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>-->
-                        <!--</div>-->
-                    <!--</div>&lt;!&ndash;/.col-md-4&ndash;&gt;-->
-
-                    <!--<div class="col-md-6 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">-->
-                        <!--<div class="feature-wrap">-->
-                            <!--<i class="fa fa-cogs"></i>-->
-                            <!--<h2>Sed do eiusmod</h2>-->
-                            <!--<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>-->
-                        <!--</div>-->
-                    <!--</div>&lt;!&ndash;/.col-md-4&ndash;&gt;-->
-
-                    <!--<div class="col-md-6 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">-->
-                        <!--<div class="feature-wrap">-->
-                            <!--<i class="fa fa-heart"></i>-->
-                            <!--<h2>Labore et dolore</h2>-->
-                            <!--<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>-->
-                        <!--</div>-->
-                    <!--</div>&lt;!&ndash;/.col-md-4&ndash;&gt;-->
-                <!--</div>&lt;!&ndash;/.services&ndash;&gt;-->
-            <!--</div>&lt;!&ndash;/.row&ndash;&gt; -->
-
-
-            <div class="get-started center wow fadeInDown">
-                <h2>Want to have more services?</h2>
-                <p class="lead">Add it here</p>
-                <div class="request">
-                    <h4><a href="addWeb">Start</a></h4>
-                </div>
-            </div><!--/.get-started-->
-
-            <!--<div class="clients-area center wow fadeInDown">-->
-                <!--<h2>What our client says</h2>-->
-                <!--<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>-->
-            <!--</div>-->
-
-            <!--<div class="row">-->
-                <!--<div class="col-md-4 wow fadeInDown">-->
-                    <!--<div class="clients-comments text-center">-->
-                        <!--<img src="images/client1.png" class="img-circle" alt="">-->
-                        <!--<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h3>-->
-                        <!--<h4><span>-John Doe /</span>  Director of corlate.com</h4>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="col-md-4 wow fadeInDown">-->
-                    <!--<div class="clients-comments text-center">-->
-                        <!--<img src="images/client2.png" class="img-circle" alt="">-->
-                        <!--<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h3>-->
-                        <!--<h4><span>-John Doe /</span>  Director of corlate.com</h4>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="col-md-4 wow fadeInDown">-->
-                    <!--<div class="clients-comments text-center">-->
-                        <!--<img src="images/client3.png" class="img-circle" alt="">-->
-                        <!--<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h3>-->
-                        <!--<h4><span>-John Doe /</span>  Director of corlate.com</h4>-->
-                    <!--</div>-->
-                <!--</div>-->
-           <!--</div>-->
-
-        <!--</div>&lt;!&ndash;/.container&ndash;&gt;-->
-    </section><!--/#feature-->
-
+                                <div class="media-body">
+                                    <h4>Jhon Doe</h4>
+                                    <h5>Founder and CEO</h5>
+                                    <ul class="tag clearfix">
+                                        <li class="btn"><a href="#">Web</a></li>
+                                        <li class="btn"><a href="#">Ui</a></li>
+                                        <li class="btn"><a href="#">Ux</a></li>
+                                        <li class="btn"><a href="#">Photoshop</a></li>
+                                    </ul>
+                                    <ul class="social_icons">
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li> 
+                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div><!--/.media -->
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-md-offset-2">
+                        <div class="single-profile-bottom wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
+                            <div class="media">
+                                <div class="pull-left">
+                                    <a href="#"><img class="media-object" src='@routes.Assets.at("images/man4.jpg")' alt=""></a>
+                                </div>
+                                <div class="media-body">
+                                    <h4>Jhon Doe</h4>
+                                    <h5>Founder and CEO</h5>
+                                    <ul class="tag clearfix">
+                                        <li class="btn"><a href="#">Web</a></li>
+                                        <li class="btn"><a href="#">Ui</a></li>
+                                        <li class="btn"><a href="#">Ux</a></li>
+                                        <li class="btn"><a href="#">Photoshop</a></li>
+                                    </ul>
+                                    <ul class="social_icons">
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li> 
+                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div><!--/.media -->
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                        </div>
+                    </div>
+                </div>  <!--/.row-->
+            </div><!--section-->
+        </div><!--/.container-->
+    </section><!--/about-us-->
+    
+    <section id="contact-page">
+        <div class="container">
+            <div class="center">        
+                <h2>Join Us!</h2>
+                <p class="lead">We have most talented people around the world!</p>
+            </div> 
+            <div class="row contact-wrap"> 
+                <div class="status alert alert-success" style="display: none"></div>
+                <form id="SignUpForm" class="contact-form" name="SignUpForm" method="post" action="">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-2 col-md-2 col-sm-offset-3 col-md-offset-3">
+                            <label>UserName</label>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-4">
+                            <input type="text" name="username" class="form-control" required="required">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-2 col-md-2 col-sm-offset-3 col-md-offset-3">
+                            <label>PassWord</label>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-4">
+                            <input type="password" name="password" class="form-control" required="required">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-2 col-md-2 col-sm-offset-3 col-md-offset-3">
+                            <label>Confirm PassWord</label>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-4">
+                            <input type="password" name="repassword" class="form-control" required="required">
+                        </div>
+                    </div>
+                    <div class="form-group center">
+                        <button type="submit" name="submit" class="btn btn-primary btn-lg" required="required">Sign Up</button>
+                    </div>
+                </form>
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </section><!--/#contact-page-->
 
     <footer id="footer" class="midnight-blue">
         <div class="container">
@@ -353,7 +285,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ul class="pull-right">
-                        <li><a href="#">Top</a></li>
+                        <li><a href="#">Home</a></li>
                         <li><a href="#privacy" class="portfolio-link" data-toggle="modal">Privacy Policy</a></li>
                         <li><a href="#terms" class="portfolio-link" data-toggle="modal">Terms</a></li>
                         <li><a href="#contact" class="portfolio-link" data-toggle="modal">Contact Us</a></li>

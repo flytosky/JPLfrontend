@@ -371,7 +371,7 @@ input.search-form:hover {
   padding: 0;
 }
 
-#main-slider .carousel .carousel-content {
+#main-slider .carousel-content {
   margin-top: 150px;
 }
 
@@ -379,11 +379,11 @@ input.search-form:hover {
   margin-top: 140px;
 }
 
-#main-slider .carousel h2 {
+#main-slider h2 {
   color: #fff;
 }
 
-#main-slider .carousel .btn-slide {
+#main-slider .btn-slide {
   padding: 8px 20px;
   background: #c52d2f;
   color: #fff;
@@ -403,7 +403,7 @@ input.search-form:hover {
   top: 200px;
 }
 
-#main-slider .carousel .item {
+#main-slider .item {
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -418,6 +418,10 @@ input.search-form:hover {
   -moz-transition: opacity ease-in-out 500ms;
   -o-transition: opacity ease-in-out 500ms;
   transition: opacity ease-in-out 500ms;
+}
+
+#main-slider .item1 {
+  background-image: url(../images/slider/front1.jpg);
 }
 
 #main-slider .carousel .item:first-child {
