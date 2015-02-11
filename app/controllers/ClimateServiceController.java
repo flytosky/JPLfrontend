@@ -43,7 +43,7 @@ public class ClimateServiceController extends Controller {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return redirect("/climate/getAllClimateServices");
+		return redirect("addWeb");
 	}
 	
 	public Result getAllClimateServices(){
