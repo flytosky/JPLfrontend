@@ -6,7 +6,7 @@
 # will call on the GlobalSettings.getController method to resolve the actual controller instance.
 # Application
 GET     /                           @controllers.ApplicationController.index
-GET     /services.html                           @controllers.ApplicationController.services
+GET     /services                           @controllers.ApplicationController.services
 GET     /                           @controllers.ApplicationController.index
 GET     /                           @controllers.ApplicationController.index
 GET     /                           @controllers.ApplicationController.index
