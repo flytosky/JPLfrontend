@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>JPL Workflow | About Us</title>
-	
-	<!-- core CSS -->
+    <title>JPL Workflow | Sign Up</title>
+    
     <!-- core CSS -->
     <link href='@routes.Assets.at("stylesheets/bootstrap.min.css")' rel="stylesheet">
     <link href='@routes.Assets.at("stylesheets/font-awesome.min.css")' rel="stylesheet">
@@ -29,7 +28,7 @@
 <body>
 
     <header id="header">
-		<!--<div class="top-bar">
+        <!-- <div class="top-bar">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-xs-4">
@@ -54,7 +53,7 @@
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>-->
 
         <nav class="navbar navbar-inverse" role="banner">
             <div class="container">
@@ -65,51 +64,219 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html"><img src="images/logo.png" height="60px" width="300px" alt="logo"></a>
+                    <a class="navbar-brand" href="/"><img src='@routes.Assets.at("images/logo.png")' height="60px" width="300px" alt="logo"></a>
                 </div>
-				
+                
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="/">Home</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Web Services <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="services.html">All Services</a></li>
-                                <li><a href="add-web.html">Add A Service</a></li>
-                                <li><a href="serviceLog.html">All service Log</a></li>
-                                <li><a href="searchServiceLog.html">Search Service Log</a></li>
+                                <li><a href="services">All Services</a></li>
+                                <li><a href="servicesclass">All Services Classic</a></li>
+                                <li><a href="catalog">Services Catalog</a></li>
+                                <li><a href="addWeb">Add A Service</a></li>
+                                <li><a href="serviceLog">All service Log</a></li>
+                                <li><a href="searchServiceLog">Search Service Log</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account Management <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="updateUser.html">Update User Details</a></li>
-                                <li><a href="deleteUser.html">Delete User</a></li>
+                                <li><a href="updateUser">Update User Details</a></li>
+                                <li><a href="deleteUser">Delete User</a></li>
                             </ul>
                         </li>
-                        <li class="active"><a href="about-us.html">About Us</a></li> 
-                        <li><a href="contact-us.html">Contact</a></li>
-                        <li><a href="log-in.html">Log In</a></li>
+                        <li><a href="aboutUs">About Us</a></li> 
+                        <li><a href="contactUs">Contact</a></li>
+                        <li class="active"><a href="logIn">Log In</a></li>
                     </ul>
                 </div>
             </div><!--/.container-->
         </nav><!--/nav-->
-	</header><!--/header-->
+    </header><!--/header-->
 
     <section id="about-us">
         <div class="container">
-			<div class="center wow fadeInDown">
-				<h2>About Us</h2>
-				<p class="lead">We are services computing group!</p>
-			</div>
-			<div>
-				<a href="http://einstein.sv.cmu.edu:9021" target="_blank">
-					<img src="images/about_us1.jpg" class="img-responsive" alt=""> 
-				</a>
-			</div>
-		</div>
-	</section>
-	
+            <div class="team">
+                <div class="center wow fadeInDown">
+                    <h2>Chef Scientists</h2>
+                </div>
+
+                <div class="row clearfix">
+                    <div class="col-md-4 col-sm-6"> 
+                        <div class="single-profile-top wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+                            <div class="media">
+                                <div class="pull-left">
+                                    <a href="#"><img class="media-object" src='@routes.Assets.at("images/man1.jpg")' alt=""></a>
+                                </div>
+                                <div class="media-body">
+                                    <h4>Jhon Doe</h4>
+                                    <h5>Founder and CEO</h5>
+                                    <ul class="tag clearfix">
+                                        <li class="btn"><a href="#">Web</a></li>
+                                        <li class="btn"><a href="#">Ui</a></li>
+                                        <li class="btn"><a href="#">Ux</a></li>
+                                        <li class="btn"><a href="#">Photoshop</a></li>
+                                    </ul>
+                                    
+                                    <ul class="social_icons">
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li> 
+                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div><!--/.media -->
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                        </div>
+                    </div><!--/.col-lg-4 -->
+                    
+                    
+                    <div class="col-md-4 col-sm-6 col-md-offset-2"> 
+                        <div class="single-profile-top wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+                            <div class="media">
+                                <div class="pull-left">
+                                    <a href="#"><img class="media-object" src='@routes.Assets.at("images/man2.jpg")' alt=""></a>
+                                </div>
+                                <div class="media-body">
+                                    <h4>Jhon Doe</h4>
+                                    <h5>Founder and CEO</h5>
+                                    <ul class="tag clearfix">
+                                        <li class="btn"><a href="#">Web</a></li>
+                                        <li class="btn"><a href="#">Ui</a></li>
+                                        <li class="btn"><a href="#">Ux</a></li>
+                                        <li class="btn"><a href="#">Photoshop</a></li>
+                                    </ul>
+                                    <ul class="social_icons">
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li> 
+                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div><!--/.media -->
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                        </div>
+                    </div><!--/.col-lg-4 -->                    
+                </div> <!--/.row -->
+                <div class="row team-bar">
+                    <div class="first-one-arrow hidden-xs">
+                        <hr>
+                    </div>
+                    <div class="first-arrow hidden-xs">
+                        <hr> <i class="fa fa-angle-up"></i>
+                    </div>
+                    <div class="second-arrow hidden-xs">
+                        <hr> <i class="fa fa-angle-down"></i>
+                    </div>
+                    <div class="third-arrow hidden-xs">
+                        <hr> <i class="fa fa-angle-up"></i>
+                    </div>
+                    <div class="fourth-arrow hidden-xs">
+                        <hr> <i class="fa fa-angle-down"></i>
+                    </div>
+                </div> <!--skill_border-->       
+
+                <div class="row clearfix">   
+                    <div class="col-md-4 col-sm-6 col-md-offset-2"> 
+                        <div class="single-profile-bottom wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
+                            <div class="media">
+                                <div class="pull-left">
+                                    <a href="#"><img class="media-object" src='@routes.Assets.at("images/man3.jpg")' alt=""></a>
+                                </div>
+
+                                <div class="media-body">
+                                    <h4>Jhon Doe</h4>
+                                    <h5>Founder and CEO</h5>
+                                    <ul class="tag clearfix">
+                                        <li class="btn"><a href="#">Web</a></li>
+                                        <li class="btn"><a href="#">Ui</a></li>
+                                        <li class="btn"><a href="#">Ux</a></li>
+                                        <li class="btn"><a href="#">Photoshop</a></li>
+                                    </ul>
+                                    <ul class="social_icons">
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li> 
+                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div><!--/.media -->
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-md-offset-2">
+                        <div class="single-profile-bottom wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
+                            <div class="media">
+                                <div class="pull-left">
+                                    <a href="#"><img class="media-object" src='@routes.Assets.at("images/man4.jpg")' alt=""></a>
+                                </div>
+                                <div class="media-body">
+                                    <h4>Jhon Doe</h4>
+                                    <h5>Founder and CEO</h5>
+                                    <ul class="tag clearfix">
+                                        <li class="btn"><a href="#">Web</a></li>
+                                        <li class="btn"><a href="#">Ui</a></li>
+                                        <li class="btn"><a href="#">Ux</a></li>
+                                        <li class="btn"><a href="#">Photoshop</a></li>
+                                    </ul>
+                                    <ul class="social_icons">
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li> 
+                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div><!--/.media -->
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                        </div>
+                    </div>
+                </div>  <!--/.row-->
+            </div><!--section-->
+        </div><!--/.container-->
+    </section><!--/about-us-->
+    
+    <section id="contact-page">
+        <div class="container">
+            <div class="center">        
+                <h2>Join Us!</h2>
+                <p class="lead">We have most talented people around the world!</p>
+            </div> 
+            <div class="row contact-wrap"> 
+                <div class="status alert alert-success" style="display: none"></div>
+                <form id="SignUpForm" class="contact-form" name="SignUpForm" method="post" action="">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-2 col-md-2 col-sm-offset-3 col-md-offset-3">
+                            <label>UserName</label>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-4">
+                            <input type="text" name="username" class="form-control" required="required">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-2 col-md-2 col-sm-offset-3 col-md-offset-3">
+                            <label>PassWord</label>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-4">
+                            <input type="password" name="password" class="form-control" required="required">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-2 col-md-2 col-sm-offset-3 col-md-offset-3">
+                            <label>Confirm PassWord</label>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-4">
+                            <input type="password" name="repassword" class="form-control" required="required">
+                        </div>
+                    </div>
+                    <div class="form-group center">
+                        <button type="submit" name="submit" class="btn btn-primary btn-lg" required="required">Sign Up</button>
+                    </div>
+                </form>
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </section><!--/#contact-page-->
+
     <footer id="footer" class="midnight-blue">
         <div class="container">
             <div class="row">
@@ -328,7 +495,6 @@
                                 Moffett Field, CA 94035 <br>
                                 Building 23, #104 <br>
                                 Tel: 000-000-0000 <br>
-                                Email:scgcmu@gmail.com
                             </p>
                            <div class="modal-head">
                                 <button type="button" class="btn btn-primary modal-head" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
@@ -339,16 +505,12 @@
             </div>
         </div>
     </div>
-    
 
-    <script src="js/jquery.js"></script>
-    <script type="text/javascript">
-        $('.carousel').carousel()
-    </script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/jquery.isotope.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/wow.min.js"></script>
+    <script src='@routes.Assets.at("javascripts/jquery.js")'></script>
+    <script src='@routes.Assets.at("javascripts/bootstrap.min.js")'></script>
+    <script src='@routes.Assets.at("javascripts/jquery.prettyPhoto.js")'></script>
+    <script src='@routes.Assets.at("javascripts/jquery.isotope.min.js")'></script>
+    <script src='@routes.Assets.at("javascripts/main.js")'></script>
+    <script src='@routes.Assets.at("javascripts/wow.min.js")'></script>
 </body>
 </html>

@@ -24,4 +24,43 @@ public class ApplicationController extends Controller {
 	public Result index() {
 		return ok(index.render());
 	}
+	public Result services() {
+		return ok(services.render());
+	}
+	public Result aboutUs() {
+		return ok(aboutUs.render());
+	}
+	public Result accountSummary() {
+		return ok(accountSummary.render());
+	}
+	public Result addWeb() {
+		return ok(addWeb.render());
+	}
+	public Result catalog() {
+		return ok(catalog.render());
+	}
+	public Result contactUs() {
+		return ok(contactUs.render());
+	}
+	public Result deleteUser() {
+		return ok(deleteUser.render());
+	}
+	public Result logIn() {
+		return ok(logIn.render());
+	}
+	public Result searchServiceLog() {
+		return ok(searchServiceLog.render());
+	}
+	public Result serviceLog() {
+		return ok(serviceLog.render());
+	}
+	public Result servicesclass() {
+		return ok(servicesclass.render());
+	}
+	public Result signUp() {
+		return ok(signUp.render());
+	}
+	public Result updateUser() {
+		return ok(updateUser.render());
+	}
 }

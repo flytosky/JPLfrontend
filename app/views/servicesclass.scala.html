@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>JPL Workflow | About Us</title>
-	
-	<!-- core CSS -->
+    <title>JPL Workflow | Services</title>
+    
     <!-- core CSS -->
     <link href='@routes.Assets.at("stylesheets/bootstrap.min.css")' rel="stylesheet">
     <link href='@routes.Assets.at("stylesheets/font-awesome.min.css")' rel="stylesheet">
@@ -29,7 +28,7 @@
 <body>
 
     <header id="header">
-		<!--<div class="top-bar">
+        <!-- <div class="top-bar">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-xs-4">
@@ -65,51 +64,222 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html"><img src="images/logo.png" height="60px" width="300px" alt="logo"></a>
+                    <a class="navbar-brand" href="/"><img src='@routes.Assets.at("images/logo.png")' height="60px" width="300px" alt="logo"></a>
                 </div>
-				
+                
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li class="dropdown">
+                        <li><a href="/">Home</a></li>
+                        <li class="active" class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Web Services <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="services.html">All Services</a></li>
-                                <li><a href="add-web.html">Add A Service</a></li>
-                                <li><a href="serviceLog.html">All service Log</a></li>
-                                <li><a href="searchServiceLog.html">Search Service Log</a></li>
+                                <li><a href="services">All Services</a></li>
+                                <li><a href="servicesclass">All Services Classic</a></li>
+                                <li><a href="catalog">Services Catalog</a></li>
+                                <li><a href="addWeb">Add A Service</a></li>
+                                <li><a href="serviceLog">All service Log</a></li>
+                                <li><a href="searchServiceLog">Search Service Log</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account Management <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="updateUser.html">Update User Details</a></li>
-                                <li><a href="deleteUser.html">Delete User</a></li>
+                                <li><a href="updateUser">Update User Details</a></li>
+                                <li><a href="deleteUser">Delete User</a></li>
                             </ul>
                         </li>
-                        <li class="active"><a href="about-us.html">About Us</a></li> 
-                        <li><a href="contact-us.html">Contact</a></li>
-                        <li><a href="log-in.html">Log In</a></li>
+                        <li><a href="aboutUs">About Us</a></li> 
+                        <li><a href="contactUs">Contact</a></li>
+                        <li><a href="logIn">Log In</a></li>
                     </ul>
                 </div>
             </div><!--/.container-->
         </nav><!--/nav-->
-	</header><!--/header-->
+        
+    </header><!--/header-->
 
-    <section id="about-us">
+    <section id="feature" class="transparent-bg wow fadeInDown" data-wow-duration="500ms" data-wow-delay="200ms">
         <div class="container">
-			<div class="center wow fadeInDown">
-				<h2>About Us</h2>
-				<p class="lead">We are services computing group!</p>
-			</div>
-			<div>
-				<a href="http://einstein.sv.cmu.edu:9021" target="_blank">
-					<img src="images/about_us1.jpg" class="img-responsive" alt=""> 
-				</a>
-			</div>
-		</div>
-	</section>
-	
+            <div class="center wow fadeInDown">
+                <h2>Our Services</h2>
+                <p class="lead">Now we have up to 7 Climate Services.<br> All ready to use.</p>
+            </div>
+
+            <table class="table table-hover table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Climate Service Name</th>
+                        <th>Purpose</th>
+                        <th>Url</th>
+                        <th>Scenario</th>
+                        <th>Version</th>
+                        <th>RootService</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Scatter-and-Histogram-Plot-of-Two-Variables</td>
+                        <td>This service generates a scatter plot between two specified variables and the histograms of the two variables, and calculates the correlation of the two variables.</td>
+                        <td> <a href="http://einstein.sv.cmu.edu:9003/cmac/web/diffPlot2Vars.html" class="btn btn-warning" target="_blank">LinkTo</a></td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>2-D Variable Zonal Mean</td>
+                        <td>This service generates a graph of a 2-dimensional variable's zonal mean with time averaing. Select a data source (model or observation), a variable name, and a time range below.</td>
+                        <td><a href="http://einstein.sv.cmu.edu:9003/cmac/web/twoDimZonalMean.html" class="btn btn-warning" target="_blank">LinkTo</a></td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>2-D Variable Map</td>
+                        <td>This service generates a map of a 2-dimensional variable with time averaging and spatial subsetting. Select a data source (model or observation), a variable name, a time range, and a spatial range (lat-lon box) below.</td>
+                        <td><a href="http://einstein.sv.cmu.edu:9003/cmac/web/twoDimMap.html" class="btn btn-warning" target="_blank">LinkTo</a></td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>3-D Variable 2-D Slice</td>
+                        <td>This service generates a slice map of a 3-dimensional variable at a selected pressure level. Select a data source, a variable name, a time range, a spatial range, and a pressure level below</td>
+                        <td> <a href="http://einstein.sv.cmu.edu:9003/cmac/web/twoDimSlice3D.html" class="btn btn-warning" target="_blank">LinkTo</a></td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>Scatter and Histogram Plot of Two Variables</td>
+                        <td>This service generates a scatter plot between two specified variables and the histograms of the two variables, and calculates the correlation of the two variables</td>
+                        <td>  <a href="http://einstein.sv.cmu.edu:9003/cmac/web/scatterPlot2Vars.html" class="btn btn-warning" target="_blank">LinkTo</a></td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>Conditional Sampling</td>
+                        <td>This service sorts one variable by the values of another variable (environmental condition, e.g. SST) and displays the averaged value of the first variable as a function of the bin value of the second variable.</td>
+                        <td><a href="http://www.cs.ucl.ac.uk/staff/w.langdon/bloat_csrp-97-29/node2.html" class="btn btn-warning" target="_blank">LinkTo</a></td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>3-D Variable Average Vertical Profile</td>
+                        <td>This service generates the average of a three-dimensional variable over a specified region and time and display the average as a function of pressure level as an X-Y plot</td>
+                        <td> <a href="http://einstein.sv.cmu.edu:9003/cmac/web/threeDimVarVertical.html" class="btn btn-warning" target="_blank">LinkTo</a></td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+
+
+
+
+
+
+            <!--<div class="row">-->
+                <!--<div class="features">-->
+                    <!--<div  style="text-align: center" class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">-->
+                        <!--<div class="feature-wrap " >-->
+                            <!--<i class="fa fa-bullhorn" style="text-align: center"></i>-->
+                        <!--</div>-->
+                        <!--<a href="http://einstein.sv.cmu.edu:9003/cmac/web/scatterPlot2Vars.html" class="btn btn-primary">LinkTo</a>-->
+                        <!--<h2>Scatter and Histogram Plot of Two Variables</h2>-->
+                        <!--<h3>This service generates a scatter plot between two specified variables and the histograms of the two variables, and calculates the correlation of the two variables.</h3>-->
+
+                    <!--</div>&lt;!&ndash;/.col-md-4&ndash;&gt;-->
+
+                    <!--<div class="col-md-6 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">-->
+                        <!--<div class="feature-wrap">-->
+                            <!--<i class="fa fa-comments"></i>-->
+                            <!--<h2>Difference Plot of Two Time Averaged Variables</h2>-->
+                            <!--<h3>This service calculates the differences between two specified variables and displays the lat-lon maps of the two variables and their differences.</h3>-->
+                        <!--</div>-->
+                    <!--</div>&lt;!&ndash;/.col-md-4&ndash;&gt;-->
+
+                    <!--<div class="col-md-6 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">-->
+                        <!--<div class="feature-wrap">-->
+                            <!--<i class="fa fa-cloud-download"></i>-->
+                            <!--<h2>Easy to customize</h2>-->
+                            <!--<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>-->
+                        <!--</div>-->
+                    <!--</div>&lt;!&ndash;/.col-md-4&ndash;&gt;-->
+                <!---->
+                    <!--<div class="col-md-6 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">-->
+                        <!--<div class="feature-wrap">-->
+                            <!--<i class="fa fa-leaf"></i>-->
+                            <!--<h2>Adipisicing elit</h2>-->
+                            <!--<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>-->
+                        <!--</div>-->
+                    <!--</div>&lt;!&ndash;/.col-md-4&ndash;&gt;-->
+
+                    <!--<div class="col-md-6 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">-->
+                        <!--<div class="feature-wrap">-->
+                            <!--<i class="fa fa-cogs"></i>-->
+                            <!--<h2>Sed do eiusmod</h2>-->
+                            <!--<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>-->
+                        <!--</div>-->
+                    <!--</div>&lt;!&ndash;/.col-md-4&ndash;&gt;-->
+
+                    <!--<div class="col-md-6 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">-->
+                        <!--<div class="feature-wrap">-->
+                            <!--<i class="fa fa-heart"></i>-->
+                            <!--<h2>Labore et dolore</h2>-->
+                            <!--<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>-->
+                        <!--</div>-->
+                    <!--</div>&lt;!&ndash;/.col-md-4&ndash;&gt;-->
+                <!--</div>&lt;!&ndash;/.services&ndash;&gt;-->
+            <!--</div>&lt;!&ndash;/.row&ndash;&gt; -->
+
+
+            <div class="get-started center wow fadeInDown">
+                <h2>Want to have more services?</h2>
+                <p class="lead">Add it here</p>
+                <div class="request">
+                    <h4><a href="add-web.html">Start</a></h4>
+                </div>
+            </div><!--/.get-started-->
+
+            <!--<div class="clients-area center wow fadeInDown">-->
+                <!--<h2>What our client says</h2>-->
+                <!--<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>-->
+            <!--</div>-->
+
+            <!--<div class="row">-->
+                <!--<div class="col-md-4 wow fadeInDown">-->
+                    <!--<div class="clients-comments text-center">-->
+                        <!--<img src="images/client1.png" class="img-circle" alt="">-->
+                        <!--<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h3>-->
+                        <!--<h4><span>-John Doe /</span>  Director of corlate.com</h4>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="col-md-4 wow fadeInDown">-->
+                    <!--<div class="clients-comments text-center">-->
+                        <!--<img src="images/client2.png" class="img-circle" alt="">-->
+                        <!--<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h3>-->
+                        <!--<h4><span>-John Doe /</span>  Director of corlate.com</h4>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="col-md-4 wow fadeInDown">-->
+                    <!--<div class="clients-comments text-center">-->
+                        <!--<img src="images/client3.png" class="img-circle" alt="">-->
+                        <!--<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h3>-->
+                        <!--<h4><span>-John Doe /</span>  Director of corlate.com</h4>-->
+                    <!--</div>-->
+                <!--</div>-->
+           <!--</div>-->
+
+        <!--</div>&lt;!&ndash;/.container&ndash;&gt;-->
+    </section><!--/#feature-->
+
+
     <footer id="footer" class="midnight-blue">
         <div class="container">
             <div class="row">
@@ -118,7 +288,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ul class="pull-right">
-                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Top</a></li>
                         <li><a href="#privacy" class="portfolio-link" data-toggle="modal">Privacy Policy</a></li>
                         <li><a href="#terms" class="portfolio-link" data-toggle="modal">Terms</a></li>
                         <li><a href="#contact" class="portfolio-link" data-toggle="modal">Contact Us</a></li>
@@ -328,7 +498,6 @@
                                 Moffett Field, CA 94035 <br>
                                 Building 23, #104 <br>
                                 Tel: 000-000-0000 <br>
-                                Email:scgcmu@gmail.com
                             </p>
                            <div class="modal-head">
                                 <button type="button" class="btn btn-primary modal-head" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
@@ -339,16 +508,12 @@
             </div>
         </div>
     </div>
-    
 
-    <script src="js/jquery.js"></script>
-    <script type="text/javascript">
-        $('.carousel').carousel()
-    </script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/jquery.isotope.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/wow.min.js"></script>
+    <script src='@routes.Assets.at("javascripts/jquery.js")'></script>
+    <script src='@routes.Assets.at("javascripts/bootstrap.min.js")'></script>
+    <script src='@routes.Assets.at("javascripts/jquery.prettyPhoto.js")'></script>
+    <script src='@routes.Assets.at("javascripts/jquery.isotope.min.js")'></script>
+    <script src='@routes.Assets.at("javascripts/main.js")'></script>
+    <script src='@routes.Assets.at("javascripts/wow.min.js")'></script>
 </body>
 </html>

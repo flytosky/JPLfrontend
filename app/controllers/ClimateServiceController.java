@@ -38,13 +38,12 @@ public class ClimateServiceController extends Controller {
 			// add a new climate service by calling the RESTful API
 			String apiString = Constants.RESTful_API_URL + Constants.ADD_CLIMATE_SERVICE;
 			JsonNode response = RESTfulAPICalls.postAPI(apiString, jsonData);
-
 		} catch (IllegalStateException e) {
 			e.printStackTrace();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return redirect("/climate/getAllClimateServices");
+		return redirect("addWeb");
 	}
 	
 	public Result getAllClimateServices(){

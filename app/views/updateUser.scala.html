@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>JPL Workflow | About Us</title>
-	
-	<!-- core CSS -->
+    <title>JPL Workflow | Update Form</title>
+    
     <!-- core CSS -->
     <link href='@routes.Assets.at("stylesheets/bootstrap.min.css")' rel="stylesheet">
     <link href='@routes.Assets.at("stylesheets/font-awesome.min.css")' rel="stylesheet">
@@ -27,35 +26,7 @@
 </head><!--/head-->
 
 <body>
-
     <header id="header">
-		<!--<div class="top-bar">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 col-xs-4">
-                        <div class="top-number"><p><i class="fa fa-phone-square"></i>  +0123 456 70 90</p></div>
-                    </div>
-                    <div class="col-sm-6 col-xs-8">
-                       <div class="social">
-                            <ul class="social-share">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                            </ul>
-                            <div class="search">
-                                <form role="form">
-                                    <input type="text" class="search-form" autocomplete="off" placeholder="Search">
-                                    <i class="fa fa-search"></i>
-                                </form>
-                           </div>
-                       </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
         <nav class="navbar navbar-inverse" role="banner">
             <div class="container">
                 <div class="navbar-header">
@@ -65,51 +36,133 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html"><img src="images/logo.png" height="60px" width="300px" alt="logo"></a>
+                    <a class="navbar-brand" href="/"><img src='@routes.Assets.at("images/logo.png")' height="60px" width="300px" alt="logo"></a>
                 </div>
-				
+                
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="/">Home</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Web Services <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="services.html">All Services</a></li>
-                                <li><a href="add-web.html">Add A Service</a></li>
-                                <li><a href="serviceLog.html">All service Log</a></li>
-                                <li><a href="searchServiceLog.html">Search Service Log</a></li>
+                                <li><a href="services">All Services</a></li>
+                                <li><a href="servicesclass">All Services Classic</a></li>
+                                <li><a href="catalog">Services Catalog</a></li>
+                                <li><a href="addWeb">Add A Service</a></li>
+                                <li><a href="serviceLog">All service Log</a></li>
+                                <li><a href="searchServiceLog">Search Service Log</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown">
+                        <li class="active" class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account Management <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="updateUser.html">Update User Details</a></li>
-                                <li><a href="deleteUser.html">Delete User</a></li>
+                                <li><a href="updateUser">Update User Details</a></li>
+                                <li><a href="deleteUser">Delete User</a></li>
                             </ul>
                         </li>
-                        <li class="active"><a href="about-us.html">About Us</a></li> 
-                        <li><a href="contact-us.html">Contact</a></li>
-                        <li><a href="log-in.html">Log In</a></li>
+                        <li><a href="aboutUs">About Us</a></li> 
+                        <li><a href="contactUs">Contact</a></li>
+                        <li><a href="logIn">Log In</a></li>
                     </ul>
                 </div>
             </div><!--/.container-->
         </nav><!--/nav-->
-	</header><!--/header-->
+    </header><!--/header-->
 
-    <section id="about-us">
-        <div class="container">
-			<div class="center wow fadeInDown">
-				<h2>About Us</h2>
-				<p class="lead">We are services computing group!</p>
-			</div>
-			<div>
-				<a href="http://einstein.sv.cmu.edu:9021" target="_blank">
-					<img src="images/about_us1.jpg" class="img-responsive" alt=""> 
-				</a>
-			</div>
-		</div>
-	</section>
-	
+
+    <section id="blog" class="container">
+        <div class="center">
+            <h2>User Update Form</h2>
+            <legend></legend>
+        </div>
+
+        <div class="blog">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div id="contact-page clearfix">
+                        <div class="status alert alert-success" style="display: none"></div>
+                        <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php" role="form">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-5 col-md-5">
+                                    <div class="form-group">
+                                        <label>User Name*</label>
+                                        <input type="text" class="form-control" required="required">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Password*</label>
+                                        <input type="text" class="form-control" required="required">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>First Name*</label>
+                                        <input type="text" class="form-control" required="required">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-7 col-md-7">
+                                    <div class="form-group">
+                                        <label>Affliation</label>
+                                        <textarea name="message" id="message" class="form-control" rows="8"></textarea>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-5 col-md-5">   
+                                    <div class="form-group">
+                                        <label>Middle Name</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Last Name</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Email</label>
+                                        <input type="email" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-7 col-md-7">
+                                    <div class="form-group">
+                                        <label>Goal</label>
+                                        <textarea name="goal" id="goal" class="form-control" rows="8"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-5 col-md-5">   
+                                    <div class="form-group">
+                                        <label>Research Area</label>
+                                        <input type="text" class="form-control">
+                                    </div>  
+                                    <div class="form-group">
+                                        <label>Algo</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>AWS Familiarity</label>
+                                        <select class="form-control" id="awsFamiliarity" name="awsFamiliarity">
+                                            <option class="blank">--- AWS Familiarity ---</option>
+                                            <option value="Beginner">Beginner</option>
+                                            <option value="Proficient">Proficient</option>
+                                            <option value="Expert">Expert</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-7 col-md-7">
+                                    <div class="form-group">
+                                        <label>Budget Concerns</label>
+                                        <textarea name="budget" id="budget" class="form-control" rows="8"></textarea>
+                                    </div>                    
+                                </div>
+                            </div>
+                            <div class="form-group center">
+                                <button type="submit" class="btn btn-primary btn-lg" required="required">Submit</button>
+                            </div>
+                        </form>     
+                    </div><!--/#contact-page-->
+                </div><!--/.col-md-8-->   
+            </div><!--/.row-->
+         </div><!--/.blog-->
+    </section><!--/#blog-->
+
     <footer id="footer" class="midnight-blue">
         <div class="container">
             <div class="row">
@@ -118,7 +171,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ul class="pull-right">
-                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Top</a></li>
                         <li><a href="#privacy" class="portfolio-link" data-toggle="modal">Privacy Policy</a></li>
                         <li><a href="#terms" class="portfolio-link" data-toggle="modal">Terms</a></li>
                         <li><a href="#contact" class="portfolio-link" data-toggle="modal">Contact Us</a></li>
@@ -328,7 +381,6 @@
                                 Moffett Field, CA 94035 <br>
                                 Building 23, #104 <br>
                                 Tel: 000-000-0000 <br>
-                                Email:scgcmu@gmail.com
                             </p>
                            <div class="modal-head">
                                 <button type="button" class="btn btn-primary modal-head" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
@@ -339,16 +391,12 @@
             </div>
         </div>
     </div>
-    
 
-    <script src="js/jquery.js"></script>
-    <script type="text/javascript">
-        $('.carousel').carousel()
-    </script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/jquery.isotope.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/wow.min.js"></script>
+    <script src='@routes.Assets.at("javascripts/jquery.js")'></script>
+    <script src='@routes.Assets.at("javascripts/bootstrap.min.js")'></script>
+    <script src='@routes.Assets.at("javascripts/jquery.prettyPhoto.js")'></script>
+    <script src='@routes.Assets.at("javascripts/jquery.isotope.min.js")'></script>
+    <script src='@routes.Assets.at("javascripts/main.js")'></script>
+    <script src='@routes.Assets.at("javascripts/wow.min.js")'></script>
 </body>
 </html>

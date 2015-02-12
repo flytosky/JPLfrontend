@@ -5,27 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Blog Single | Corlate</title>
-    
+    <title>Portfolio | Corlate</title>
     <!-- core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/prettyPhoto.css" rel="stylesheet">
-    <link href="css/animate.min.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-    <link href="css/responsive.css" rel="stylesheet">
-    
+    <link href='@routes.Assets.at("stylesheets/bootstrap.min.css")' rel="stylesheet">
+    <link href='@routes.Assets.at("stylesheets/font-awesome.min.css")' rel="stylesheet">
+    <link href='@routes.Assets.at("stylesheets/animate.min.css")' rel="stylesheet">
+    <link href='@routes.Assets.at("stylesheets/prettyPhoto.css")' rel="stylesheet">
+    <link href='@routes.Assets.at("stylesheets/main.css")' rel="stylesheet">
+    <link href='@routes.Assets.at("stylesheets/responsive.css")' rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
-    <![endif]-->       
-    <link rel="shortcut icon" href="images/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+    <![endif]-->
+    <link rel="shortcut icon" href='@routes.Assets.at("images/ico/favicon.png")'>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href='@routes.Assets.at("images/ico/apple-touch-icon-144-precomposed.png")'>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href='@routes.Assets.at("images/ico/apple-touch-icon-114-precomposed.png")'>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href='@routes.Assets.at("images/ico/apple-touch-icon-72-precomposed.png")'>
+    <link rel="apple-touch-icon-precomposed" href='@routes.Assets.at("images/ico/apple-touch-icon-57-precomposed.png")'>
 </head><!--/head-->
-
 <body>
 
     <header id="header">
@@ -55,6 +52,7 @@
                 </div>
             </div>
         </div> -->
+
         <nav class="navbar navbar-inverse" role="banner">
             <div class="container">
                 <div class="navbar-header">
@@ -64,267 +62,238 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html"><img src="images/logo.png" height="60px" width="300px" alt="logo"></a>
+                    <a class="navbar-brand" href="/"><img src='@routes.Assets.at("images/logo.png")' height="60px" width="300px" alt="logo"></a>
                 </div>
                 
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html">Home</a></li>
-                        <li class="dropdown">
+                        <li><a href="/">Home</a></li>
+                        <li class="active" class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Web Services <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="services.html">All Services</a></li>
-                                <li><a href="add-web.html">Add A Service</a></li>
+                                <li><a href="services">All Services</a></li>
+                                <li><a href="servicesclass">All Services Classic</a></li>
+                                <li><a href="catalog">Services Catalog</a></li>
+                                <li><a href="addWeb">Add A Service</a></li>
+                                <li><a href="serviceLog">All service Log</a></li>
+                                <li><a href="searchServiceLog">Search Service Log</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account Management <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="updateUser.html">Update User Details</a></li>
-                                <li><a href="deleteUser.html">Delete User</a></li>
-                                <li><a href="accountSummary.html">Account Summary</a></li>
-                                <li><a href="serviceLog.html">All service Log</a></li>
-                                <li><a href="searchServiceLog.html">Search Service Log</a></li>
+                                <li><a href="updateUser">Update User Details</a></li>
+                                <li><a href="deleteUser">Delete User</a></li>
                             </ul>
                         </li>
-                        <li><a href="about-us.html">About Us</a></li> 
-                        <li><a href="contact-us.html">Contact</a></li>
-                        <li><a href="log-in.html">Log In</a></li>
+                        <li><a href="aboutUs">About Us</a></li> 
+                        <li><a href="contactUs">Contact</a></li>
+                        <li><a href="logIn">Log In</a></li>
                     </ul>
                 </div>
             </div><!--/.container-->
         </nav><!--/nav-->
         
     </header><!--/header-->
+    <section id="portfolio">
+        <div class="container">
+            <div class="center">
+               <h2>Service Catalog</h2>
+               <p class="lead">All services have been cataloged for explicitness. </p>
+            </div>
+        
+
+            <ul class="portfolio-filter text-center">
+                <li><a class="btn btn-default active" href="#" data-filter="*">All Works</a></li>
+                <li><a class="btn btn-default" href="#" data-filter=".bootstrap">Class 1</a></li>
+                <li><a class="btn btn-default" href="#" data-filter=".html">Class 2</a></li>
+                <li><a class="btn btn-default" href="#" data-filter=".wordpress">Class 3</a></li>
+            </ul><!--/#portfolio-filter-->
 
 
-    <section id="blog" class="container">
-        <div class="center">
-            <h2>Blogs</h2>
-            <p class="lead">Pellentesque habitant morbi tristique senectus et netus et malesuada</p>
-        </div>
 
-        <div class="blog">
+
             <div class="row">
-                <div class="col-md-8">
-                    <div class="blog-item">
-                        <img class="img-responsive img-blog" src="images/blog/blog1.jpg" width="100%" alt="" />
-                            <div class="row">  
-                                <div class="col-xs-12 col-sm-2 text-center">
-                                    <div class="entry-meta">
-                                        <span id="publish_date">07  NOV</span>
-                                        <span><i class="fa fa-user"></i> <a href="#"> John Doe</a></span>
-                                        <span><i class="fa fa-comment"></i> <a href="blog-item.html#comments">2 Comments</a></span>
-                                        <span><i class="fa fa-heart"></i><a href="#">56 Likes</a></span>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-10 blog-content">
-                                    <h2>Consequat bibendum quam</h2>
-                                    <p>Curabitur quis libero leo, pharetra mattis eros. Praesent consequat libero eget dolor convallis vel rhoncus magna scelerisque. Donec nisl ante, elementum eget posuere a, consectetur a metus. Proin a adipiscing sapien. Suspendisse vehicula porta lectus vel semper. Nullam sapien elit, lacinia eu tristique non.posuere at mi. Morbi at turpis id urna ullamcorper ullamcorper.</p>
+                <div class="portfolio-items">
+                    <div class="portfolio-item apps col-xs-12 col-sm-4 col-md-3">
+                        <div class="recent-work-wrap">
+                            <div class="pricing-area text-center">
 
-                                    <p>Curabitur quis libero leo, pharetra mattis eros. Praesent consequat libero eget dolor convallis vel rhoncus magna scelerisque. Donec nisl ante, elementum eget posuere a, consectetur a metus. Proin a adipiscing sapien. Suspendisse vehicula porta lectus vel semper.</p>
-
-                                    <div class="post-tags">
-                                        <strong>Tag:</strong> <a href="#">Cool</a> / <a href="#">Creative</a> / <a href="#">Dubttstep</a>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div><!--/.blog-item-->
-                        
-                        <div class="media reply_section">
-                            <div class="pull-left post_reply text-center">
-                                <a href="#"><img src="images/blog/boy.png" class="img-circle" alt="" /></a>
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-google-plus"></i> </a></li>
-                                </ul>
-                            </div>
-                            <div class="media-body post_reply_content">
-                                <h3>Antone L. Huges</h3>
-                                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariaturp</p>
-                                <p><strong>Web:</strong> <a href="http://www.shapebootstrap.net">www.shapebootstrap.net</a></p>
-                            </div>
-                        </div> 
-                        
-                        <h1 id="comments_title">5 Comments</h1>
-                        <div class="media comment_section">
-                            <div class="pull-left post_comments">
-                                <a href="#"><img src="images/blog/girl.png" class="img-circle" alt="" /></a>
-                            </div>
-                            <div class="media-body post_reply_comments">
-                                <h3>Marsh</h3>
-                                <h4>NOVEMBER 9, 2013 AT 9:15 PM</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
-                                <a href="#">Reply</a>
-                            </div>
-                        </div> 
-                        <div class="media comment_section">
-                            <div class="pull-left post_comments">
-                                <a href="#"><img src="images/blog/boy2.png" class="img-circle" alt="" /></a>
-                            </div>
-                            <div class="media-body post_reply_comments">
-                                <h3>Marsh</h3>
-                                <h4>NOVEMBER 9, 2013 AT 9:15 PM</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
-                                <a href="#">Reply</a>
-                            </div>
-                        </div> 
-                        <div class="media comment_section">
-                            <div class="pull-left post_comments">
-                                <a href="#"><img src="images/blog/boy3.png" class="img-circle" alt="" /></a>
-                            </div>
-                            <div class="media-body post_reply_comments">
-                                <h3>Marsh</h3>
-                                <h4>NOVEMBER 9, 2013 AT 9:15 PM</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
-                                <a href="#">Reply</a>
-                            </div>
-                        </div> 
-
-
-                        <div id="contact-page clearfix">
-                            <div class="status alert alert-success" style="display: none"></div>
-                            <div class="message_heading">
-                                <h4>Leave a Replay</h4>
-                                <p>Make sure you enter the(*)required information where indicate.HTML code is not allowed</p>
-                            </div> 
-      
-                            <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php" role="form">
-                                <div class="row">
-                                    <div class="col-sm-5">
-                                        <div class="form-group">
-                                            <label>Name *</label>
-                                            <input type="text" class="form-control" required="required">
+                                <div class="col-sm-12 plan price-one wow fadeInDown">
+                                    <ul>
+                                        <li class="heading-one" data-toggle="collapse" data-target="#ndemo1">
+                                            <span >Difference Plot of Two Time Averaged Variables</span>
+                                        </li>
+                                        <div id="ndemo1" class="collapse">
+                                            <li   >This service calculates the differences between two specified variables and displays the lat-lon maps of the two variables and their differences.<br>
+                                                <br><br></li>
+                                            <li>Scenario : 1</li>
+                                            <li>Version : 2</li>
+                                            <li>Root Service : 3</li>
                                         </div>
-                                        <div class="form-group">
-                                            <label>Email *</label>
-                                            <input type="email" class="form-control" required="required">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>URL</label>
-                                            <input type="url" class="form-control">
-                                        </div>                    
-                                    </div>
-                                    <div class="col-sm-7">                        
-                                        <div class="form-group">
-                                            <label>Message *</label>
-                                            <textarea name="message" id="message" required="required" class="form-control" rows="8"></textarea>
-                                        </div>                        
-                                        <div class="form-group">
-                                            <button type="submit" class="btn btn-primary btn-lg" required="required">Submit Message</button>
-                                        </div>
-                                    </div>
+                                        <li class="plan-action">
+                                            <a href="http://einstein.sv.cmu.edu:9003/cmac/web/diffPlot2Vars.html" class="btn btn-primary" target="_blank">LinkTo</a>
+                                        </li>
+                                    </ul>
                                 </div>
-                            </form>     
-                        </div><!--/#contact-page-->
-                    </div><!--/.col-md-8-->
 
-                <aside class="col-md-4">
-                    <div class="widget search">
-                        <form role="form">
-                                <input type="text" class="form-control search_box" autocomplete="off" placeholder="Search Here">
-                        </form>
-                    </div><!--/.search-->
-    				
-    				<div class="widget categories">
-                        <h3>Recent Comments</h3>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="single_comments">
-    								<img src="images/blog/avatar3.png" alt=""  />
-    								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do </p>
-                                    <div class="entry-meta small muted">
-                                        <span>By <a href="#">Alex</a></span <span>On <a href="#">Creative</a></span>
-                                    </div>
-    							</div>
-    							<div class="single_comments">
-    								<img src="images/blog/avatar3.png" alt=""  />
-    								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do </p>
-    								<div class="entry-meta small muted">
-                                        <span>By <a href="#">Alex</a></span <span>On <a href="#">Creative</a></span>
-                                    </div>
-    							</div>
-    							<div class="single_comments">
-    								<img src="images/blog/avatar3.png" alt=""  />
-    								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do </p>
-    								<div class="entry-meta small muted">
-                                        <span>By <a href="#">Alex</a></span <span>On <a href="#">Creative</a></span>
-                                    </div>
-    							</div>
-    							
                             </div>
-                        </div>                     
-                    </div><!--/.recent comments-->
-                     
+                        </div>
+                    </div><!--/.portfolio-item-->
 
-                    <div class="widget categories">
-                        <h3>Categories</h3>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <ul class="blog_category">
-                                    <li><a href="#">Computers <span class="badge">04</span></a></li>
-                                    <li><a href="#">Smartphone <span class="badge">10</span></a></li>
-                                    <li><a href="#">Gedgets <span class="badge">06</span></a></li>
-                                    <li><a href="#">Technology <span class="badge">25</span></a></li>
-                                </ul>
+                    <div class="portfolio-item joomla bootstrap col-xs-12 col-sm-4 col-md-3">
+                        <div class="recent-work-wrap">
+                            <div class="pricing-area text-center">
+                                <div class="col-sm-12 plan price-two wow fadeInDown" style="text-align: center">
+                                    <ul>
+                                        <li class="heading-two" data-toggle="collapse" data-target="#ndemo2">
+                                            <span>2-D Variable Zonal Mean</span>
+                                            <br>
+                                            <br>
+                                        </li>
+                                        <div id="ndemo2" class="collapse">
+                                            <li>This service generates a graph of a 2-dimensional variable's zonal mean with time averaing. Select a data source (model or observation), a variable name, and a time range below.<br></li>
+                                            <li>Scenario : 1</li>
+                                            <li>Version : 2</li>
+                                            <li>Root Service : 3</li>
+                                        </div>
+                                        <li class="plan-action">
+                                            <a href="http://einstein.sv.cmu.edu:9003/cmac/web/twoDimZonalMean.html" class="btn btn-primary" target="_blank">LinkTo</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>                     
-                    </div><!--/.categories-->
-    				
-    				<div class="widget archieve">
-                        <h3>Archieve</h3>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <ul class="blog_archieve">
-                                    <li><a href="#"><i class="fa fa-angle-double-right"></i> December 2013 <span class="pull-right">(97)</span></a></li>
-                                    <li><a href="#"><i class="fa fa-angle-double-right"></i> November 2013 <span class="pull-right">(32)</a></li>
-                                    <li><a href="#"><i class="fa fa-angle-double-right"></i> October 2013 <span class="pull-right">(19)</a></li>
-                                    <li><a href="#"><i class="fa fa-angle-double-right"></i> September 2013 <span class="pull-right">(08)</a></li>
-                                </ul>
+                        </div>          
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item bootstrap wordpress col-xs-12 col-sm-4 col-md-3">
+                        <div class="recent-work-wrap">
+                            <div class="pricing-area text-center">
+                                <div class="col-sm-12 plan price-three wow fadeInDown">
+                                    <ul>
+                                        <li class="heading-three" data-toggle="collapse" data-target="#ndemo3">
+                                            <span>2-D Variable Map</span>
+                                            <br>
+                                            <br>
+                                        </li>
+                                        <div id="ndemo3" class="collapse">
+                                            <li>This service generates a map of a 2-dimensional variable with time averaging and spatial subsetting. Select a data source (model or observation), a variable name, a time range, and a spatial range (lat-lon box) below.</li>
+                                            <li>Scenario : 1</li>
+                                            <li>Version : 2</li>
+                                            <li>Root Service : 3</li>
+                                        </div>
+                                        <li class="plan-action">
+                                            <a href="http://einstein.sv.cmu.edu:9003/cmac/web/twoDimMap.html" class="btn btn-primary" target="_blank">LinkTo</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>                     
-                    </div><!--/.archieve-->
-    				
-                    <div class="widget tags">
-                        <h3>Tag Cloud</h3>
-                        <ul class="tag-cloud">
-                            <li><a class="btn btn-xs btn-primary" href="#">Apple</a></li>
-                            <li><a class="btn btn-xs btn-primary" href="#">Barcelona</a></li>
-                            <li><a class="btn btn-xs btn-primary" href="#">Office</a></li>
-                            <li><a class="btn btn-xs btn-primary" href="#">Ipod</a></li>
-                            <li><a class="btn btn-xs btn-primary" href="#">Stock</a></li>
-                            <li><a class="btn btn-xs btn-primary" href="#">Race</a></li>
-                            <li><a class="btn btn-xs btn-primary" href="#">London</a></li>
-                            <li><a class="btn btn-xs btn-primary" href="#">Football</a></li>
-                            <li><a class="btn btn-xs btn-primary" href="#">Porche</a></li>
-                            <li><a class="btn btn-xs btn-primary" href="#">Gadgets</a></li>
-                        </ul>
-                    </div><!--/.tags-->
-    				
-    				<div class="widget blog_gallery">
-                        <h3>Our Gallery</h3>
-                        <ul class="sidebar-gallery">
-                            <li><a href="#"><img src="images/blog/gallery1.png" alt="" /></a></li>
-                            <li><a href="#"><img src="images/blog/gallery2.png" alt="" /></a></li>
-                            <li><a href="#"><img src="images/blog/gallery3.png" alt="" /></a></li>
-                            <li><a href="#"><img src="images/blog/gallery4.png" alt="" /></a></li>
-                            <li><a href="#"><img src="images/blog/gallery5.png" alt="" /></a></li>
-                            <li><a href="#"><img src="images/blog/gallery6.png" alt="" /></a></li>
-                        </ul>
-                    </div><!--/.blog_gallery-->
-    					
-    				
-                </aside>     
+                        </div>        
+                    </div><!--/.portfolio-item-->
 
-            </div><!--/.row-->
+                    <div class="portfolio-item joomla wordpress apps col-xs-12 col-sm-4 col-md-3">
+                        <div class="recent-work-wrap">
+                            <div class="pricing-area text-center">
+                                <div class="col-sm-12 plan price-four wow fadeInDown">
+                                    <ul>
+                                        <li class="heading-four" data-toggle="collapse" data-target="#ndemo4">
+                                            <span>3-D Variable 2-D Slice</span>
+                                            <br>
+                                            <br>
+                                        </li>
+                                        <div id="ndemo4" class="collapse">
+                                            <li>This service generates a slice map of a 3-dimensional variable at a selected pressure level. Select a data source, a variable name, a time range, a spatial range, and a pressure level below.</li>
+                                            <li>Scenario : 1</li>
+                                            <li>Version : 2</li>
+                                            <li>Root Service : 3</li>
+                                        </div>
+                                        <li class="plan-action">
+                                            <a href="http://einstein.sv.cmu.edu:9003/cmac/web/twoDimSlice3D.html" class="btn btn-primary" target="_blank">LinkTo</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>           
+                    </div><!--/.portfolio-item-->
 
-         </div><!--/.blog-->
+                    <div class="portfolio-item joomla html bootstrap col-xs-12 col-sm-4 col-md-3">
+                        <div class="recent-work-wrap">
+                            <div class="pricing-area text-center">
+                                <div class="col-sm-12 plan price-five wow fadeInDown">
+                                    <ul>
+                                        <li class="heading-five"  data-toggle="collapse" data-target="#ndemo5">
+                                            <span>Scatter and Histogram Plot of Two Variables</span>
 
-    </section><!--/#blog-->
+                                        </li>
+                                        <div id="ndemo5" class="collapse">
+                                            <li>This service generates a scatter plot between two specified variables and the histograms of the two variables, and calculates the correlation of the two variables.<br><br></li>
+                                            <li>Scenario : 1</li>
+                                            <li>Version : 2</li>
+                                            <li>Root Service : 3</li>
+                                        </div>
+                                        <li class="plan-action">
+                                            <a href="http://einstein.sv.cmu.edu:9003/cmac/web/scatterPlot2Vars.html" class="btn btn-primary" target="_blank">LinkTo</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>      
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item wordpress html apps col-xs-12 col-sm-4 col-md-3">
+                        <div class="recent-work-wrap">
+                            <div class="pricing-area text-center">
+                                <div class="col-sm-12 plan price-six wow fadeInDown">
+                                    <ul>
+                                        <li class="heading-six" data-toggle="collapse" data-target="#ndemo6">
+                                            <span>Conditional Sampling</span>
+                                            <br>
+                                            <br>
+                                        </li>
+                                        <div id="ndemo6" class="collapse">
+                                            <li>This service sorts one variable by the values of another variable (environmental condition, e.g. SST) and displays the averaged value of the first variable as a function of the bin value of the second variable.</li>
+                                            <li>Scenario : 1</li>
+                                            <li>Version : 2</li>
+                                            <li>Root Service : 3</li>
+                                        </div>
+                                        <li class="plan-action">
+                                            <a href="http://www.cs.ucl.ac.uk/staff/w.langdon/bloat_csrp-97-29/node2.html" class="btn btn-primary" target="_blank">LinkTo</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>         
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item wordpress html col-xs-12 col-sm-4 col-md-3">
+                        <div class="recent-work-wrap">
+                            <div class="pricing-area text-center">
+                                <div class="col-sm-12  plan price-seven wow fadeInDown">
+                                    <ul>
+                                        <li class="heading-seven" data-toggle="collapse" data-target="#ndemo7">
+                                            <span>3-D Variable Average Vertical Profile</span>
+                                        </li>
+                                        <div id="ndemo7" class="collapse">
+                                            <li>This service generates the average of a three-dimensional variable over a specified region and time and display the average as a function of pressure level as an X-Y plot.</li>
+                                            <li>Scenario : 1</li>
+                                            <li>Version : 2</li>
+                                            <li>Root Service : 3</li>
+                                        </div>
+                                        <li class="plan-action">
+                                            <a href="http://einstein.sv.cmu.edu:9003/cmac/web/threeDimVarVertical.html" class="btn btn-primary" target="_blank">LinkTo</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>          
+                    </div><!--/.portfolio-item-->
 
 
+                </div>
+            </div>
+        </div>
+    </section><!--/#portfolio-item-->
+    
     <footer id="footer" class="midnight-blue">
         <div class="container">
             <div class="row">
@@ -543,7 +512,6 @@
                                 Moffett Field, CA 94035 <br>
                                 Building 23, #104 <br>
                                 Tel: 000-000-0000 <br>
-                                Email:scgcmu@gmail.com
                             </p>
                            <div class="modal-head">
                                 <button type="button" class="btn btn-primary modal-head" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
@@ -555,11 +523,11 @@
         </div>
     </div>
 
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/jquery.isotope.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/wow.min.js"></script>
+    <script src='@routes.Assets.at("javascripts/jquery.js")'></script>
+    <script src='@routes.Assets.at("javascripts/bootstrap.min.js")'></script>
+    <script src='@routes.Assets.at("javascripts/jquery.prettyPhoto.js")'></script>
+    <script src='@routes.Assets.at("javascripts/jquery.isotope.min.js")'></script>
+    <script src='@routes.Assets.at("javascripts/main.js")'></script>
+    <script src='@routes.Assets.at("javascripts/wow.min.js")'></script>
 </body>
 </html>

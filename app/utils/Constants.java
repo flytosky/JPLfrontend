@@ -9,6 +9,6 @@ public class Constants {
 	public static final String FORMAT = "json";
 	
 	// climate service
-	public static final String ADD_CLIMATE_SERVICE = "climate/add/climateService";
+	public static final String ADD_CLIMATE_SERVICE = "/climate/addClimateService";
 	
 }

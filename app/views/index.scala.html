@@ -1,6 +1,3 @@
-@import helper._
-@main("index") {
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,21 +8,21 @@
     <title>JPL Workflow Platform</title>
 	
 	<!-- core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/animate.min.css" rel="stylesheet">
-    <link href="css/prettyPhoto.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-    <link href="css/responsive.css" rel="stylesheet">
+    <link href='@routes.Assets.at("stylesheets/bootstrap.min.css")' rel="stylesheet">
+    <link href='@routes.Assets.at("stylesheets/font-awesome.min.css")' rel="stylesheet">
+    <link href='@routes.Assets.at("stylesheets/animate.min.css")' rel="stylesheet">
+    <link href='@routes.Assets.at("stylesheets/prettyPhoto.css")' rel="stylesheet">
+    <link href='@routes.Assets.at("stylesheets/main.css")' rel="stylesheet">
+    <link href='@routes.Assets.at("stylesheets/responsive.css")' rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
-    <![endif]-->       
-    <link rel="shortcut icon" href="images/ico/favicon.png">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+    <![endif]-->
+    <link rel="shortcut icon" href='@routes.Assets.at("images/ico/favicon.png")'>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href='@routes.Assets.at("images/ico/apple-touch-icon-144-precomposed.png")'>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href='@routes.Assets.at("images/ico/apple-touch-icon-114-precomposed.png")'>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href='@routes.Assets.at("images/ico/apple-touch-icon-72-precomposed.png")'>
+    <link rel="apple-touch-icon-precomposed" href='@routes.Assets.at("images/ico/apple-touch-icon-57-precomposed.png")'>
 </head><!--/head-->
 
 <body class="homepage">
@@ -66,32 +63,33 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html"><img src="images/logo.png" height="60px" width="300px" alt="logo"></a>
+                    <a class="navbar-brand" href="/"><img src='@routes.Assets.at("images/logo.png")' height="60px" width="300px" alt="logo"></a>
                 </div>
-				
+                
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html">Home</a></li>
+                        <li class="active"><a href="/">Home</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Web Services <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="services.html">All Services</a></li>
-                                <li><a href="add-web.html">Add A Service</a></li>
+                                <li><a href="services">All Services</a></li>
+                                <li><a href="servicesclass">All Services Classic</a></li>
+                                <li><a href="catalog">Services Catalog</a></li>
+                                <li><a href="addWeb">Add A Service</a></li>
+                                <li><a href="serviceLog">All service Log</a></li>
+                                <li><a href="searchServiceLog">Search Service Log</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account Management <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="updateUser.html">Update User Details</a></li>
-                                <li><a href="deleteUser.html">Delete User</a></li>
-                                <li><a href="accountSummary.html">Account Summary</a></li>
-                                <li><a href="serviceLog.html">All service Log</a></li>
-                                <li><a href="searchServiceLog.html">Search Service Log</a></li>
+                                <li><a href="updateUser">Update User Details</a></li>
+                                <li><a href="deleteUser">Delete User</a></li>
                             </ul>
                         </li>
-                        <li><a href="about-us.html">About Us</a></li> 
-                        <li><a href="contact-us.html">Contact</a></li>
-                        <li><a href="log-in.html">Log In</a></li>
+                        <li><a href="aboutUs">About Us</a></li> 
+                        <li><a href="contactUs">Contact</a></li>
+                        <li><a href="logIn">Log In</a></li>
                     </ul>
                 </div>
             </div><!--/.container-->
@@ -100,14 +98,14 @@
     </header><!--/header-->
 
     <section id="main-slider" class="no-margin">
-        <div class="carousel slide">
+        <!-- <div class="carousel slide">
             <ol class="carousel-indicators">
                 <li data-target="#main-slider" data-slide-to="0" class="active"></li>
                 <li data-target="#main-slider" data-slide-to="1"></li>
             </ol>
-            <div class="carousel-inner">
+            <div class="carousel-inner"> -->
 
-                <div class="item active" style="background-image: url(images/slider/front1.jpg)">
+                <div class="item1 active">
                     <div class="container">
                         <div class="row slide-margin">
                             <div class="col-sm-6">
@@ -120,7 +118,7 @@
 
                             <div class="col-sm-6 hidden-xs animation animated-item-4">
                                 <div class="slider-img">
-                                    <img src="images/slider/img1.png" class="img-responsive">
+                                    <img src='@routes.Assets.at("images/slider/img1.png")' class="img-responsive">
                                 </div>
                             </div>
 
@@ -128,7 +126,7 @@
                     </div>
                 </div><!--/.item-->
 
-                <div class="item" style="background-image: url(images/slider/front2.jpg)">
+                <!-- <div class="item item2">
                     <div class="container">
                         <div class="row slide-margin">
                             <div class="col-sm-6">
@@ -141,20 +139,19 @@
 
                             <div class="col-sm-6 hidden-xs animation animated-item-4">
                                 <div class="slider-img">
-                                    <img src="images/slider/img3.png" class="img-responsive">
+                                    <img src='@routes.Assets.at("images/slider/img3.png")' class="img-responsive">
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div><!--/.item-->
+                </div> -->
             </div><!--/.carousel-inner-->
-        </div><!--/.carousel-->
-        <a class="prev hidden-xs" href="#main-slider" data-slide="prev">
+        <!-- <a class="prev hidden-xs" href="#main-slider" data-slide="prev">
             <i class="fa fa-chevron-left"></i>
         </a>
         <a class="next hidden-xs" href="#main-slider" data-slide="next">
             <i class="fa fa-chevron-right"></i>
-        </a>
+        </a>-->
     </section><!--/#main-slider-->
 
     <section id="feature" >
@@ -218,7 +215,7 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-4 col-md-4">
                     <div class="recent-work-wrap">
-                        <img class="img-responsive" src="images/portfolio/recent/item1.jpg" alt="">
+                        <img class="img-responsive" src='@routes.Assets.at("images/portfolio/recent/item1.jpg")' alt="">
                         <div class="overlay">
                             <div class="recent-work-inner">
                                 <h3><a>22nd IEEE International Conference on Web Services (ICWS)</a></h3>
@@ -230,7 +227,7 @@
 
                 <div class="col-xs-12 col-sm-4 col-md-4">
                     <div class="recent-work-wrap">
-                        <img class="img-responsive" src="images/portfolio/recent/item2.jpg" alt="">
+                        <img class="img-responsive" src='@routes.Assets.at("images/portfolio/recent/item2.jpg")' alt="">
                         <div class="overlay">
                             <div class="recent-work-inner">
                                 <h3><a>8th IEEE International Conference on Cloud Computing (CLOUD)</a></h3>
@@ -242,7 +239,7 @@
 
                 <div class="col-xs-12 col-sm-4 col-md-4">
                     <div class="recent-work-wrap">
-                        <img class="img-responsive" src="images/portfolio/recent/item3.jpg" alt="">
+                        <img class="img-responsive" src='@routes.Assets.at("images/portfolio/recent/item3.jpg")' alt="">
                         <div class="overlay">
                             <div class="recent-work-inner">
                                 <h3><a>3rd IEEE International Conference on Mobile Services (MS)</a></h3>
@@ -533,7 +530,7 @@
             </div>    
 
             <div class="partner row col-sm-12">
-                <div class="center col-sm-4 col-sm-offset-5"><a class="center" href="http://www.nasa.gov/" target="_blank"><img class="img-responsive wow fadeInDown center" data-wow-duration="1000ms" data-wow-delay="300ms" width="220px" height="180px" src="images/partners/partner1.png"></a></div>
+                <div class="center col-sm-4 col-sm-offset-5"><a class="center" href="http://www.nasa.gov/" target="_blank"><img class="img-responsive wow fadeInDown center" data-wow-duration="1000ms" data-wow-delay="300ms" width="220px" height="180px" src='@routes.Assets.at("images/partners/partner1.png")'></a></div>
             </div>        
         </div><!--/.container-->
     </section><!--/#partner-->
@@ -852,13 +849,11 @@
     </div>
     
     
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/jquery.isotope.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/wow.min.js"></script>
+    <script src='@routes.Assets.at("javascripts/jquery.js")'></script>
+    <script src='@routes.Assets.at("javascripts/bootstrap.min.js")'></script>
+    <script src='@routes.Assets.at("javascripts/jquery.prettyPhoto.js")'></script>
+    <script src='@routes.Assets.at("javascripts/jquery.isotope.min.js")'></script>
+    <script src='@routes.Assets.at("javascripts/main.js")'></script>
+    <script src='@routes.Assets.at("javascripts/wow.min.js")'></script>
 </body>
 </html>
-
-}
