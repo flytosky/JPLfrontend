@@ -16,11 +16,15 @@ import play.mvc.*;
 import play.data.*;
 import static play.data.Form.*;
 import views.html.*;
+import models.ClimateService;
 
 @Named
 @Singleton
 public class ApplicationController extends Controller {
  
+ 	final static Form<ClimateService> climateServiceForm = Form
+			.form(ClimateService.class);
+
 	public Result index() {
 		return ok(index.render());
 	}
@@ -34,7 +38,7 @@ public class ApplicationController extends Controller {
 		return ok(accountSummary.render());
 	}
 	public Result addWeb() {
-		return ok(addWeb.render());
+		return ok(addWeb.render(climateServiceForm));
 	}
 	public Result catalog() {
 		return ok(catalog.render());
