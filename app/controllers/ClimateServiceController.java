@@ -12,6 +12,10 @@ import utils.RESTfulAPICalls;
 
 import javax.inject.Named;
 import javax.inject.Singleton;
+import play.mvc.*;
+import play.data.*;
+import static play.data.Form.*;
+import views.html.*;
 
 import models.ClimateService;
 

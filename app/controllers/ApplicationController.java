@@ -25,7 +25,8 @@ public class ApplicationController extends Controller {
 		return ok(index.render());
 	}
 	public Result services() {
-		return ok(services.render());
+		String temp = " ";
+		return ok(services.render(temp));
 	}
 	public Result aboutUs() {
 		return ok(aboutUs.render());

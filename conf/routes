@@ -20,7 +20,7 @@ GET     /logIn                      @controllers.ApplicationController.logIn
 GET     /signUp                     @controllers.ApplicationController.signUp
 
 # Climate Service
-POST	/climate/addClimateService				@controllers.ClimateServiceController.addClimateService
+POST		/addClimateService				@controllers.ClimateServiceController.addClimateService
 
 
 
