@@ -13,7 +13,7 @@
 <!-- qihaoz
             <property name="javax.persistence.jdbc.password" value="" />
 -->
-            <property name="javax.persistence.jdbc.password" value="1234" />
+            <property name="javax.persistence.jdbc.password" value="155011" />
 
         
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />

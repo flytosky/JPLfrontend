@@ -22,9 +22,6 @@ GET     /signUp                     @controllers.ApplicationController.signUp
 # Climate Service
 POST	/climate/addClimateService				@controllers.ClimateServiceController.addClimateService
 GET		/services 			@controllers.ClimateServiceController.getAllClimateServices
->>>>>>> 2080db5f4f775a7dca0c2c408b288bfe543cc6f9
-
-
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
