@@ -10,5 +10,6 @@ public class Constants {
 	
 	// climate service
 	public static final String ADD_CLIMATE_SERVICE = "/climate/addClimateService";
+	public static final String GET_ALL_CLIMATE_SERVICE = "/climate/getAllClimateServices/json";
 	
 }
