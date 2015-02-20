@@ -1,3 +1,6 @@
+@(serviceList : List[ClimateService])
+@import helper._
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -101,48 +104,85 @@
     <section id="feature" class="transparent-bg wow fadeInDown" data-wow-duration="500ms" data-wow-delay="200ms">
         <div class="container">
             <div class="center wow fadeInDown">
-                <h2>Our Services</h2>
-                <p class="lead">Now we have up to 7 Climate Services.<br> All ready to use.</p>
+                <h2>Our Services </h2>
+                <p class="lead"> we have up to 7 Climate Services.<br> All ready to use.</p>
             </div>
 
             <div class="pricing-area text-center">
                 <div class="row wow fadeInDown" data-wow-delay="300ms">
-                    <div class="col-sm-4 plan price-one wow fadeInDown">
-                        <ul>
-                            <li class="heading-one" data-toggle="collapse" data-target="#demo1">
-                                <span >Difference Plot of Two Time Averaged Variables</span>
-                            </li>
-                            <div id="demo1" class="collapse">
-                                <li   >This service calculates the differences between two specified variables and displays the lat-lon maps of the two variables and their differences.<br>
-                                    <br><br></li>
-                                <li>Scenario : 1</li>
-                                <li>Version : 2</li>
-                                <li>Root Service : 3</li>
-                            </div>
-                            <li class="plan-action">
-                                <a href="http://einstein.sv.cmu.edu:9003/cmac/web/diffPlot2Vars.html" class="btn btn-primary" target="_blank">LinkTo</a>
-                            </li>
-                        </ul>
-                    </div>
 
-                    <div class="col-sm-4 plan price-two wow fadeInDown" style="text-align: center">
-                        <ul>
-                            <li class="heading-two" data-toggle="collapse" data-target="#demo2">
-                                <span>2-D Variable Zonal Mean</span>
-                                <br>
-                                <br>
-                            </li>
-                            <div id="demo2" class="collapse">
-                                <li>This service generates a graph of a 2-dimensional variable's zonal mean with time averaing. Select a data source (model or observation), a variable name, and a time range below.<br></li>
-                                <li>Scenario : 1</li>
-                                <li>Version : 2</li>
-                                <li>Root Service : 3</li>
+                    @for(service <- serviceList) {
+                        @if(service.getRandom() == 1) {
+                            <div class="col-sm-4 plan price-one wow fadeInDown">
+                                <ul>
+                                    <li class="heading-one" data-toggle="collapse" data-target=@("#"+service.getName())>
+                                        <span >@service.getRandom()+@service.getName()</span>
+                                    </li>
+                                    <div id=@service.getName() class="collapse">
+                                        <li> @service.getPurpose() <br><br><br></li>
+                                        <li> @("Scenario : "+service.getScenario() )</li>
+                                        <li> @("Version : "+service.getVersionNo() )</li>
+                                        <li> @("Root Services : "+service.getRootServiceId() )</li>
+                                    </div>
+                                    <li class="plan-action">
+                                        <a href=@service.getUrl() class="btn btn-primary" target="_blank">LinkTo</a>
+                                    </li>
+                                </ul>
                             </div>
-                            <li class="plan-action">
-                                <a href="http://einstein.sv.cmu.edu:9003/cmac/web/twoDimZonalMean.html" class="btn btn-primary" target="_blank">LinkTo</a>
-                            </li>
-                        </ul>
-                    </div>
+                            } else {
+                            <div class="col-sm-4 plan price-two wow fadeInDown">
+                                <ul>
+                                    <li class="heading-two" data-toggle="collapse" data-target=@("#"+service.getName())>
+                                        <span >@service.getRandom()+@service.getName()</span>
+                                    </li>
+                                    <div id=@service.getName() class="collapse">
+                                        <li> @service.getPurpose() <br><br><br></li>
+                                        <li> @("Scenario : "+service.getScenario() )</li>
+                                        <li> @("Version : "+service.getVersionNo() )</li>
+                                        <li> @("Root Services : "+service.getRootServiceId() )</li>
+                                    </div>
+                                    <li class="plan-action">
+                                        <a href=@service.getUrl() class="btn btn-primary" target="_blank">LinkTo</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            }
+
+                        @*<div class="col-sm-4 plan price-one wow fadeInDown">*@
+                            @*<ul>*@
+                                @*<li class="heading-one" data-toggle="collapse" data-target=@("#"+service.getName())>*@
+                                    @*<span >@service.getName()</span>*@
+                                @*</li>*@
+                                @*<div id=@service.getName() class="collapse">*@
+                                    @*<li> @service.getPurpose() <br><br><br></li>*@
+                                    @*<li> @service.getScenario() </li>*@
+                                    @*<li> @service.getVersionNo() </li>*@
+                                    @*<li> @service.getRootServiceId() </li>*@
+                                @*</div>*@
+                                @*<li class="plan-action">*@
+                                    @*<a href=@service.getUrl() class="btn btn-primary" target="_blank">LinkTo</a>*@
+                                @*</li>*@
+                            @*</ul>*@
+                        @*</div>*@
+                    }
+                    @*<div class="col-sm-4 plan price-two wow fadeInDown" style="text-align: center">*@
+                        @*<ul>*@
+                            @*<li class="heading-two" data-toggle="collapse" data-target="#demo2">*@
+                                @*<span>2-D Variable Zonal Mean</span>*@
+                                @*<br>*@
+                                @*<br>*@
+                            @*</li>*@
+                            @*<div id="demo2" class="collapse">*@
+                                @*<li>This service generates a graph of a 2-dimensional variable's zonal mean with time averaing. Select a data source (model or observation), a variable name, and a time range below.<br></li>*@
+                                @*<li>Scenario : 1</li>*@
+                                @*<li>Version : 2</li>*@
+                                @*<li>Root Service : 3</li>*@
+                            @*</div>*@
+                            @*<li class="plan-action">*@
+                                @*<a href="http://einstein.sv.cmu.edu:9003/cmac/web/twoDimZonalMean.html" class="btn btn-primary" target="_blank">LinkTo</a>*@
+                            @*</li>*@
+                        @*</ul>*@
+                    @*</div>*@
 
                     <div class="col-sm-4 plan price-three wow fadeInDown">
                         <ul>

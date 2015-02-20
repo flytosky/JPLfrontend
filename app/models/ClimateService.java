@@ -7,6 +7,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+
+
 @Entity
 public class ClimateService {
 	@Id
@@ -22,13 +24,14 @@ public class ClimateService {
 	private String scenario;
 	private String createTime;
 	private String versionNo;
+	private int randomNum;
 
 	public ClimateService() {
 	}
 	
 	public ClimateService(long rootServiceId, User user, String name,
 			String purpose, String url, String scenario, String createTime,
-			String versionNo) {
+			String versionNo, int randomNum) {
 		super();
 		this.rootServiceId = rootServiceId;
 		this.user = user;
@@ -38,8 +41,13 @@ public class ClimateService {
 		this.scenario = scenario;
 		this.createTime = createTime;
 		this.versionNo = versionNo;
+		this.randomNum = randomNum;
 	}
+	public void setRandom(int random) {this.randomNum = random; }
 
+	public int getRandom() {
+		return randomNum;
+	}
 
 	public long getId() {
 		return id;

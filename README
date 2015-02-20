@@ -1,4 +1,6 @@
-This is your new Play application
+This is our new Play application
 =================================
 
-This file will be packaged with your application, when using `activator dist`.
+Before start, please turn on your mysql server and create a database named testdb.
+And in conf/META-INF/persistence.xml file, please provide your username and password of your mysql server.
+Then under the folder of JPLFrontend, please use activator “run {port number}” to run the application.

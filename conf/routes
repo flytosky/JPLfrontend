@@ -6,7 +6,7 @@
 # will call on the GlobalSettings.getController method to resolve the actual controller instance.
 # Application
 GET     /                           @controllers.ApplicationController.index
-GET     /services                   @controllers.ApplicationController.services
+#GET     /services                   @controllers.ApplicationController.services
 GET     /servicesclass              @controllers.ApplicationController.servicesclass
 GET     /catalog                    @controllers.ApplicationController.catalog
 GET     /addWeb                     @controllers.ApplicationController.addWeb
@@ -21,6 +21,7 @@ GET     /signUp                     @controllers.ApplicationController.signUp
 
 # Climate Service
 POST	/climate/addClimateService				@controllers.ClimateServiceController.addClimateService
+GET		/services 			@controllers.ClimateServiceController.getAllClimateServices
 
 
 
