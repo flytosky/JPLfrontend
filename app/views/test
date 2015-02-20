@@ -1,0 +1,38 @@
+
+@(services: List[detail])
+
+
+<ul>
+        @* 提取 msgs 入参中的全部数据 *@
+        @services.map { detail =>
+            <li>
+                @* 提取名字 *@
+                <p><strong>@detail.name</strong></p>
+                @* 提取内容 *@
+                <p>@detail.purpose</p>
+            </li>
+        }
+ </ul>
+
+
+ <ul>
+         <li class="heading-one" data-toggle="collapse" data-target=@detail.sharpdemoID>
+             <span>@detail.name</span>
+         </li>
+
+         <div id=@detail.demoID class="collapse">
+             <li>@detail.purpose<br>
+                 <br><br></li>
+             <li>@detail.scenerio</li>
+             <li>@detail.version</li>
+             <li>@detail.rootService</li>
+         </div>
+
+         <li class="plan-action">
+             <a href="http://einstein.sv.cmu.edu:9003/cmac/web/diffPlot2Vars.html" class="btn btn-primary" target="_blank">LinkTo</a>
+         </li>
+
+ </ul>
+
+
+

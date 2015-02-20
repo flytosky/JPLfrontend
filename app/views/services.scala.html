@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 @(climateServices: String)
 
 @main("test"){
+=======
+@(serviceList : List[ClimateService])
+@import helper._
+
+>>>>>>> 2080db5f4f775a7dca0c2c408b288bfe543cc6f9
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -104,144 +110,175 @@
     <section id="feature" class="transparent-bg wow fadeInDown" data-wow-duration="500ms" data-wow-delay="200ms">
         <div class="container">
             <div class="center wow fadeInDown">
-                <h2>Our Services</h2>
-                <p class="lead">Now we have up to 7 Climate Services.<br> All ready to use.</p>
+                <h2>Our Services </h2>
+                <p class="lead"> we have up to 7 Climate Services.<br> All ready to use.</p>
             </div>
 
             <div class="pricing-area text-center">
                 <div class="row wow fadeInDown" data-wow-delay="300ms">
-                    <div class="col-sm-4 plan price-one wow fadeInDown">
-                        <ul>
-                            <li class="heading-one" data-toggle="collapse" data-target="#demo1">
-                                <span >Difference Plot of Two Time Averaged Variables</span>
-                            </li>
-                            <div id="demo1" class="collapse">
-                                <li   >This service calculates the differences between two specified variables and displays the lat-lon maps of the two variables and their differences.<br>
-                                    <br><br></li>
-                                <li>Scenario : 1</li>
-                                <li>Version : 2</li>
-                                <li>Root Service : 3</li>
-                            </div>
-                            <li class="plan-action">
-                                <a href="http://einstein.sv.cmu.edu:9003/cmac/web/diffPlot2Vars.html" class="btn btn-primary" target="_blank">LinkTo</a>
-                            </li>
-                        </ul>
-                    </div>
 
-                    <div class="col-sm-4 plan price-two wow fadeInDown" style="text-align: center">
-                        <ul>
-                            <li class="heading-two" data-toggle="collapse" data-target="#demo2">
-                                <span>2-D Variable Zonal Mean</span>
-                                <br>
-                                <br>
-                            </li>
-                            <div id="demo2" class="collapse">
-                                <li>This service generates a graph of a 2-dimensional variable's zonal mean with time averaing. Select a data source (model or observation), a variable name, and a time range below.<br></li>
-                                <li>Scenario : 1</li>
-                                <li>Version : 2</li>
-                                <li>Root Service : 3</li>
-                            </div>
-                            <li class="plan-action">
-                                <a href="http://einstein.sv.cmu.edu:9003/cmac/web/twoDimZonalMean.html" class="btn btn-primary" target="_blank">LinkTo</a>
-                            </li>
-                        </ul>
-                    </div>
+                    @for(service <- serviceList) {
 
-                    <div class="col-sm-4 plan price-three wow fadeInDown">
-                        <ul>
-                            <li class="heading-three" data-toggle="collapse" data-target="#demo3">
-                                <span>2-D Variable Map</span>
-                                <br>
-                                <br>
-                            </li>
-                            <div id="demo3" class="collapse">
-                            <li>This service generates a map of a 2-dimensional variable with time averaging and spatial subsetting. Select a data source (model or observation), a variable name, a time range, and a spatial range (lat-lon box) below.</li>
-                                <li>Scenario : 1</li>
-                                <li>Version : 2</li>
-                                <li>Root Service : 3</li>
+                            @if(service.getCount > 3 && service.getCount % 3 == 1) {
+                                <div class="row wow fadeInDown" data-wow-delay="300ms">
+                                }
+                            <div class=@("col-sm-4 plan"+service.getStyle+"wow fadeInDown")>
+                                <ul>
+                                    <li class=@service.getStyle1 data-toggle="collapse" data-target=@("#"+service.getName())>
+                                        <span >@service.getName()</span>
+                                    </li>
+                                    <div id=@service.getName() class="collapse">
+                                        <li> @service.getPurpose() <br><br><br></li>
+                                        <li> @("Scenario : "+service.getScenario() )</li>
+                                        <li> @("Version : "+service.getVersionNo() )</li>
+                                        <li> @("Root Services : "+service.getRootServiceId() )</li>
+                                    </div>
+                                    <li class="plan-action">
+                                        <a href=@service.getUrl() class="btn btn-primary" target="_blank">LinkTo</a>
+                                    </li>
+                                </ul>
                             </div>
-                            <li class="plan-action">
-                                <a href="http://einstein.sv.cmu.edu:9003/cmac/web/twoDimMap.html" class="btn btn-primary" target="_blank">LinkTo</a>
-                            </li>
-                        </ul>
-                    </div>
+                            @if(service.getCount % 3 == 0) {
+                                </div>
+                                <br>
+                                <br>
+                                }
+
+
+
+
+                        @*<div class="col-sm-4 plan price-one wow fadeInDown">*@
+                            @*<ul>*@
+                                @*<li class="heading-one" data-toggle="collapse" data-target=@("#"+service.getName())>*@
+                                    @*<span >@service.getName()</span>*@
+                                @*</li>*@
+                                @*<div id=@service.getName() class="collapse">*@
+                                    @*<li> @service.getPurpose() <br><br><br></li>*@
+                                    @*<li> @service.getScenario() </li>*@
+                                    @*<li> @service.getVersionNo() </li>*@
+                                    @*<li> @service.getRootServiceId() </li>*@
+                                @*</div>*@
+                                @*<li class="plan-action">*@
+                                    @*<a href=@service.getUrl() class="btn btn-primary" target="_blank">LinkTo</a>*@
+                                @*</li>*@
+                            @*</ul>*@
+                        @*</div>*@
+                    }
+            </div>
+                    @*<div class="col-sm-4 plan price-two wow fadeInDown" style="text-align: center">*@
+                        @*<ul>*@
+                            @*<li class="heading-two" data-toggle="collapse" data-target="#demo2">*@
+                                @*<span>2-D Variable Zonal Mean</span>*@
+                                @*<br>*@
+                                @*<br>*@
+                            @*</li>*@
+                            @*<div id="demo2" class="collapse">*@
+                                @*<li>This service generates a graph of a 2-dimensional variable's zonal mean with time averaing. Select a data source (model or observation), a variable name, and a time range below.<br></li>*@
+                                @*<li>Scenario : 1</li>*@
+                                @*<li>Version : 2</li>*@
+                                @*<li>Root Service : 3</li>*@
+                            @*</div>*@
+                            @*<li class="plan-action">*@
+                                @*<a href="http://einstein.sv.cmu.edu:9003/cmac/web/twoDimZonalMean.html" class="btn btn-primary" target="_blank">LinkTo</a>*@
+                            @*</li>*@
+                        @*</ul>*@
+                    @*</div>*@
+
+                    @*<div class="col-sm-4 plan price-three wow fadeInDown">*@
+                        @*<ul>*@
+                            @*<li class="heading-three" data-toggle="collapse" data-target="#demo3">*@
+                                @*<span>2-D Variable Map</span>*@
+                                @*<br>*@
+                                @*<br>*@
+                            @*</li>*@
+                            @*<div id="demo3" class="collapse">*@
+                            @*<li>This service generates a map of a 2-dimensional variable with time averaging and spatial subsetting. Select a data source (model or observation), a variable name, a time range, and a spatial range (lat-lon box) below.</li>*@
+                                @*<li>Scenario : 1</li>*@
+                                @*<li>Version : 2</li>*@
+                                @*<li>Root Service : 3</li>*@
+                            @*</div>*@
+                            @*<li class="plan-action">*@
+                                @*<a href="http://einstein.sv.cmu.edu:9003/cmac/web/twoDimMap.html" class="btn btn-primary" target="_blank">LinkTo</a>*@
+                            @*</li>*@
+                        @*</ul>*@
+                    @*</div>*@
                 </div>
 
-                <div class="row wow fadeInDown" data-wow-delay="600ms">
-                    <div class="col-sm-4 plan price-four wow fadeInDown">
-                        <ul>
-                            <li class="heading-four" data-toggle="collapse" data-target="#demo4">
-                                <span>3-D Variable 2-D Slice</span>
-                                <br>
-                                <br>
-                            </li>
-                            <div id="demo4" class="collapse">
-                            <li>This service generates a slice map of a 3-dimensional variable at a selected pressure level. Select a data source, a variable name, a time range, a spatial range, and a pressure level below.</li>
-                            <li>Scenario : 1</li>
-                            <li>Version : 2</li>
-                            <li>Root Service : 3</li>
-                            </div>
-                            <li class="plan-action">
-                                <a href="http://einstein.sv.cmu.edu:9003/cmac/web/twoDimSlice3D.html" class="btn btn-primary" target="_blank">LinkTo</a>
-                            </li>
-                        </ul>
-                    </div>
+                @*<div class="row wow fadeInDown" data-wow-delay="600ms">*@
+                    @*<div class="col-sm-4 plan price-four wow fadeInDown">*@
+                        @*<ul>*@
+                            @*<li class="heading-four" data-toggle="collapse" data-target="#demo4">*@
+                                @*<span>3-D Variable 2-D Slice</span>*@
+                                @*<br>*@
+                                @*<br>*@
+                            @*</li>*@
+                            @*<div id="demo4" class="collapse">*@
+                            @*<li>This service generates a slice map of a 3-dimensional variable at a selected pressure level. Select a data source, a variable name, a time range, a spatial range, and a pressure level below.</li>*@
+                            @*<li>Scenario : 1</li>*@
+                            @*<li>Version : 2</li>*@
+                            @*<li>Root Service : 3</li>*@
+                            @*</div>*@
+                            @*<li class="plan-action">*@
+                                @*<a href="http://einstein.sv.cmu.edu:9003/cmac/web/twoDimSlice3D.html" class="btn btn-primary" target="_blank">LinkTo</a>*@
+                            @*</li>*@
+                        @*</ul>*@
+                    @*</div>*@
 
-                    <div class="col-sm-4 plan price-five wow fadeInDown">
-                        <ul>
-                            <li class="heading-five"  data-toggle="collapse" data-target="#demo5">
-                                <span>Scatter and Histogram Plot of Two Variables</span>
+                    @*<div class="col-sm-4 plan price-five wow fadeInDown">*@
+                        @*<ul>*@
+                            @*<li class="heading-five"  data-toggle="collapse" data-target="#demo5">*@
+                                @*<span>Scatter and Histogram Plot of Two Variables</span>*@
 
-                            </li>
-                            <div id="demo5" class="collapse">
-                            <li>This service generates a scatter plot between two specified variables and the histograms of the two variables, and calculates the correlation of the two variables.<br><br></li>
-                            <li>Scenario : 1</li>
-                            <li>Version : 2</li>
-                            <li>Root Service : 3</li>
-                            </div>
-                            <li class="plan-action">
-                                <a href="http://einstein.sv.cmu.edu:9003/cmac/web/scatterPlot2Vars.html" class="btn btn-primary" target="_blank">LinkTo</a>
-                            </li>
-                        </ul>
-                    </div>
+                            @*</li>*@
+                            @*<div id="demo5" class="collapse">*@
+                            @*<li>This service generates a scatter plot between two specified variables and the histograms of the two variables, and calculates the correlation of the two variables.<br><br></li>*@
+                            @*<li>Scenario : 1</li>*@
+                            @*<li>Version : 2</li>*@
+                            @*<li>Root Service : 3</li>*@
+                            @*</div>*@
+                            @*<li class="plan-action">*@
+                                @*<a href="http://einstein.sv.cmu.edu:9003/cmac/web/scatterPlot2Vars.html" class="btn btn-primary" target="_blank">LinkTo</a>*@
+                            @*</li>*@
+                        @*</ul>*@
+                    @*</div>*@
 
-                    <div class="col-sm-4 plan price-six wow fadeInDown">
-                        <ul>
-                            <li class="heading-six" data-toggle="collapse" data-target="#demo6">
-                                <span>Conditional Sampling</span>
-                                <br>
-                                <br>
-                            </li>
-                            <div id="demo6" class="collapse">
-                            <li>This service sorts one variable by the values of another variable (environmental condition, e.g. SST) and displays the averaged value of the first variable as a function of the bin value of the second variable.</li>
-                            <li>Scenario : 1</li>
-                            <li>Version : 2</li>
-                            <li>Root Service : 3</li>
-                            </div>
-                            <li class="plan-action">
-                                <a href="http://www.cs.ucl.ac.uk/staff/w.langdon/bloat_csrp-97-29/node2.html" class="btn btn-primary" target="_blank">LinkTo</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row wow fadeInDown" data-wow-delay="900ms" >
-                    <div class="col-sm-4 col-sm-offset-4 plan price-seven wow fadeInDown">
-                        <ul>
-                            <li class="heading-seven" data-toggle="collapse" data-target="#demo7">
-                                <span>3-D Variable Average Vertical Profile</span>
-                            </li>
-                            <div id="demo7" class="collapse">
-                            <li>This service generates the average of a three-dimensional variable over a specified region and time and display the average as a function of pressure level as an X-Y plot.</li>
-                            <li>Scenario : 1</li>
-                            <li>Version : 2</li>
-                            <li>Root Service : 3</li>
-                            </div>
-                            <li class="plan-action">
-                                <a href="http://einstein.sv.cmu.edu:9003/cmac/web/threeDimVarVertical.html" class="btn btn-primary" target="_blank">LinkTo</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                    @*<div class="col-sm-4 plan price-six wow fadeInDown">*@
+                        @*<ul>*@
+                            @*<li class="heading-six" data-toggle="collapse" data-target="#demo6">*@
+                                @*<span>Conditional Sampling</span>*@
+                                @*<br>*@
+                                @*<br>*@
+                            @*</li>*@
+                            @*<div id="demo6" class="collapse">*@
+                            @*<li>This service sorts one variable by the values of another variable (environmental condition, e.g. SST) and displays the averaged value of the first variable as a function of the bin value of the second variable.</li>*@
+                            @*<li>Scenario : 1</li>*@
+                            @*<li>Version : 2</li>*@
+                            @*<li>Root Service : 3</li>*@
+                            @*</div>*@
+                            @*<li class="plan-action">*@
+                                @*<a href="http://www.cs.ucl.ac.uk/staff/w.langdon/bloat_csrp-97-29/node2.html" class="btn btn-primary" target="_blank">LinkTo</a>*@
+                            @*</li>*@
+                        @*</ul>*@
+                    @*</div>*@
+                @*</div>*@
+                @*<div class="row wow fadeInDown" data-wow-delay="900ms" >*@
+                    @*<div class="col-sm-4 col-sm-offset-4 plan price-seven wow fadeInDown">*@
+                        @*<ul>*@
+                            @*<li class="heading-seven" data-toggle="collapse" data-target="#demo7">*@
+                                @*<span>3-D Variable Average Vertical Profile</span>*@
+                            @*</li>*@
+                            @*<div id="demo7" class="collapse">*@
+                            @*<li>This service generates the average of a three-dimensional variable over a specified region and time and display the average as a function of pressure level as an X-Y plot.</li>*@
+                            @*<li>Scenario : 1</li>*@
+                            @*<li>Version : 2</li>*@
+                            @*<li>Root Service : 3</li>*@
+                            @*</div>*@
+                            @*<li class="plan-action">*@
+                                @*<a href="http://einstein.sv.cmu.edu:9003/cmac/web/threeDimVarVertical.html" class="btn btn-primary" target="_blank">LinkTo</a>*@
+                            @*</li>*@
+                        @*</ul>*@
+                    @*</div>*@
+                @*</div>*@
             </div>
         </div>
 

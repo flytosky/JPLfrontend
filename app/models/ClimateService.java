@@ -7,6 +7,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+
+
 @Entity
 public class ClimateService {
 	@Id
@@ -22,13 +24,17 @@ public class ClimateService {
 	private String scenario;
 	private String createTime;
 	private String versionNo;
+	private int randomNum;
+	private int count;
+	private String style;
+	private String style1;
 
 	public ClimateService() {
 	}
 	
 	public ClimateService(long rootServiceId, User user, String name,
 			String purpose, String url, String scenario, String createTime,
-			String versionNo) {
+			String versionNo, int randomNum, int count, String style, String style1) {
 		super();
 		this.rootServiceId = rootServiceId;
 		this.user = user;
@@ -38,8 +44,36 @@ public class ClimateService {
 		this.scenario = scenario;
 		this.createTime = createTime;
 		this.versionNo = versionNo;
+		this.randomNum = randomNum;
+		this.count = count;
+		this.style = style;
+		this.style1 = style1;
+	}
+	public void setStyle() {
+		int rand = this.randomNum;
+		switch(rand) {
+			case 0 : style = "price-one"; style1 = "heading-one"; break;
+			case 1 : style = "price-two"; style1 = "heading-two"; break;
+			case 2 : style = "price-three"; style1 = "heading-three"; break;
+			case 3 : style = "price-four"; style1 = "heading-four"; break;
+			case 4 : style = "price-five"; style1 = "heading-five"; break;
+			default : style = "price-six"; style1 = "heading-six"; break;
+		}
 	}
 
+	public String getStyle() {return style;}
+
+	public String getStyle1() {return style1;}
+
+	public void setCount(int count) {this.count = count; }
+
+	public int getCount() {return count;}
+
+	public void setRandom(int random) {this.randomNum = random; }
+
+	public int getRandom() {
+		return randomNum;
+	}
 
 	public long getId() {
 		return id;
