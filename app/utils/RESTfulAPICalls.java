@@ -23,6 +23,7 @@ public class RESTfulAPICalls {
 					public JsonNode apply(WSResponse response) {
 						if (response.getStatus() == 200
 								|| response.getStatus() == 201) {
+							System.out.printf("good");
 							return response.asJson();
 						} else { // no response from the server
 							return createResponse(ResponseType.GETERROR);

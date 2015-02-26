@@ -9,6 +9,7 @@ import play.mvc.Controller;
 import play.mvc.Result;
 import utils.Constants;
 import utils.RESTfulAPICalls;
+import java.lang.Object.*;
 
 import javax.inject.Named;
 import javax.inject.Singleton;
@@ -88,12 +89,51 @@ public class ClimateServiceController extends Controller {
 //		} catch (Exception e) {
 //			e.printStackTrace();
 //		}
+
+		String apiString = Constants.RESTful_API_URL + Constants.GET_ALL_CLIMATE_SERVICE;
+		JsonNode response = RESTfulAPICalls.getAPICall(apiString);
+
+			List<String>name = new ArrayList<String>();
+			List<String>purpose = new ArrayList<String>();
+			List<String>versionNo = new ArrayList<String>();
+			List<String>scenario = new ArrayList<String>();
+			List<Long>rootService = new ArrayList<Long>();
+			List<String>url = new ArrayList<String>();
+
+			for (int i = 0; i < response.size() ;  ++i) {
+				 name.add(response.get(i).findPath("climateServiceName").asText());
+				 purpose.add(response.get(i).findPath("purpose").asText());
+				 versionNo.add(response.get(i).findPath("versionNo").asText());
+				 rootService.add(response.get(i).findPath("rootServiceId").asLong());
+				 scenario.add(response.get(i).findPath("scenario").asText());
+				 url.add(response.get(i).findPath("url").asText());
+			}
+
 		Random rand = new Random();
-		int cnt = 1;
 		List<ClimateService> cSList = new ArrayList<ClimateService>();
+		int cnt = 1;
+
+		for (int i = 0; i < response.size() ;  ++i) {
+			ClimateService cS = new ClimateService();
+			cS.setCount(cnt);
+			cS.setName(name.get(i));
+			cS.setPurpose(purpose.get(i));
+			cS.setScenario(scenario.get(i));
+			cS.setVersionNo(versionNo.get(i));
+			cS.setRootServiceId(rootService.get(i));
+			cS.setRandom(rand.nextInt(5));
+			cS.setUrl(url.get(i));
+			cS.setStyle();
+			cSList.add(cS);
+			cnt++;
+		}
+
+/*
+		int cnt = 1;
+
 		ClimateService cS = new ClimateService();
 		cS.setCount(cnt);
-		cS.setName("Difference-Plot-of-Two-Time-Averaged-Variables");
+		cS.setName(name.get(2));
 		cS.setPurpose("This service calculates the differences between two specified variables and displays the lat-lon maps of the two variables and their differences.");
 		cS.setScenario("1");
 		cS.setVersionNo("2");
@@ -180,7 +220,7 @@ public class ClimateServiceController extends Controller {
 		cS6.setUrl("http://einstein.sv.cmu.edu:9003/cmac/web/threeDimVarVertical.html");
 		cS6.setStyle();
 		cSList.add(cS6);
-
+*/
 		System.out.println("Test");
 		return ok(views.html.services.render(cSList));
 
